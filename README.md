@@ -1,6 +1,10 @@
 # pu037 SUSTAIN simulation archive
 
-## R scripts
+Dome, L., Edmunds, C.E.R, Wills, A.J. (2021) SUSTAIN captures category learning, recognition, and hippocampal activation in a unidimensional vs information-integration task. **In Proceedings of the 43rd Annual Conference of the Cognitive Science Society.**
+
+This repository is the archival copy of the [OSF repository](https://osf.io/jc9xs/).
+
+## R scripts in model/
 
 `pu037train.R` - Generates a matrix, where each row is one trial presented to
 the model and each column contains information about that trial.
