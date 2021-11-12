@@ -1,0 +1,211 @@
+#+TITLE: SUSTAIN captures classification, recognition, and hippocampal activation in a unidimensional versus information-integration task
+#+DATE: <2020-09-10 Thu 12:24:00>
+
+* Bullet point
+
+1. There are these two tasks, II and UD that differ in their optimal decision
+bounds.
+2. These tasks have been used extensively in the categorization research.
+4. They were mainly used to support one type of dual-system model, COVIS
+5. But there are many studies that cast doubt about the strength of evidence 
+favouring covis
+6. Among those results are Edmunds and Carpenter.
+7. This is Edmunds and this is Carpenter.
+8. Here we provide a single system account of these results.
+9. We use SUSTAIN because it has been shown to account for recognition 
+performance and was also shown perviously to map really well to neural data
+10. This is SUSTAIN.
+11. This is the experiment we fit.
+12. We fit. It works. It is good.
+13. We show for the first time that a single-system model can account for 
+human data from these tasks, their respective recogniton performance, and
+differences in hippocampal activation.
+14. Even the authors thought that SUSTAIN might not be the appropriate model 
+to use in II, but the experiments they based this on have been challenged.
+15. Informally COVIS predicts different things for recognition memory and
+hippocampus, and at limit it predicts similarly bad recognition performance
+in II and UD. Because UD is rule-based, so you don't have to remember items, 
+because II is procedural, so it is implicit, whereas recognition memory is
+explicit.
+16.  
+17. In conclusion, we have shown through formal modelling that human 
+performance in these paradigms are captured by a single-system model, 
+SUSTAIN.
+
+* Introduction
+
+- In many categorization tasks, observers are asked to learn and make
+  classification judgements by attending to several sources of information
+  (Shaw, 1982). One common pair of tasks are the unidimensional (UD) and
+  information-integration (II) tasks. + frequent
+
+- Figure shows that UD category structures have an optimal decision bound
+  paralell to one of the axis, while II structures have a diagonal bound with
+  either positive or negative slope.
+
+- Many initial empirical results obtained from these problems were taken as
+  evidence for COVIS (Ashby & Valentin,  2016) - one formalization of the
+  two-system theory of categorization. However, results from multiple labs
+  pointed out flaws in the experimental designs (Newell, Moore, Wills &
+  Milton, 2013) with more prompt alternative explanations (Le Pelley, Newell
+  & Nosofsky, 2019; Donkin, Newell, Kalish, Dunn & Nosofsky, 2015) and problems
+  with the COVIS simulations themselves (Edmunds, Milton, & Wills, 2018).
+
+- This growing debate spurred alternative explanations (cognitive-resource
+  accounts, Le Pelley et  al., 2019, Lewandowsky, Yang, Newell & Kalish,
+  2012; a single system using uni- or multidimensional
+  rules, Edmunds et al., 2018; maybe a review? or see Wills et al. 2019
+  on testimonial reviews?).  Among these results are Carpenter and Edmunds.
+
+- Carpenter et al. (2016) found that MTL and specifically the HPC were more 
+  active in the II task than in the UD task.
+
+- Edmunds et al. (2016) followed a similar line of investigation by looking 
+  at recognition memory performance in the II and UD problems. They found 
+  superior recognition memory for II compared to UD problems, further adding
+  support to the neural data.
+
+- We provide a formal explanation of these results with a single-system 
+  account.
+
+- Why SUSTAIN
+
+- Here, we present a formal simulation with the SUSTAIN model capturing human
+  categorization accuracy in II and UD. In addition, our simulation captures two
+  findings considered problematic for COVIS: superior recognition memory
+  following the II task compared to UD (Edmunds et al., 2016); higher hippocampal
+  activation while learning II structures compared to learning UD (Carpenter,
+  Wills, Benattayallah & Milton, 2016). 
+
+** SUSTAIN
+
+- We refer the reader to Love, Medin and
+  Gureckis (2004) for the full description of the model's artchitecture and
+  Love and Gureckis (2007) for the full description of the supplementing
+  architecture capturing recognition memory.
+
+- Briefly, SUSTAIN is an adaptive clustering model, which proposes that
+  clusters underlie category representations (Love, 2005).
+
+- A paragraph briefly describing SUSTAIN: starts at one cluster, similarity, cluster
+  activation, supervised and unsupervised cluster recruitment in response
+  to prediction errors and dissimilarity (surprise), adjusting clusters, attentional
+  tuning, if there is no surprise, adjusts existing clusters.
+
+- SUSTAIN prefers simple solutions, and only starts recruiting clusters in 
+  respeonse to prediction errors. This means that more difficult task will 
+  cause SUSTAIN to densely populate the psychological problem space with clusters.
+
+- Clusters can behave like rules, exemplars, or prototypes (Love & Gureckis, 2007).
+  SUSTAIN behaves like a prototype model, if each category is represented by one
+  cluster; an exemplar model, if each item is captured by its own cluster; a
+  rule-based model, if its attentional mechanism biases it towards solutions that
+  involve limited number of stimulus attributes.
+
+** This study
+
+- Here, we fit SUSTAIN to the group-level data of Edmunds et al. (2016). We 
+  show that SUSTAIN captures test accuracy and superior recognition memory.
+  We also see that SUSTAIN's behaviour in the two problems can be 
+  bridged to higher HPC activations observed in II.
+
+* Simulation and Analysis (polished tech report)
+
+Here be dragons. Here being OSF.
+
+** Edmunds et al. (2016)
+
+- Describe method.
+
+** Simulation details
+
+- Fitting procedure and best fitting parameters.
+
+** Category Test
+
+- Captured.
+
+** Cluster Recruitment
+
+- Higher number of mean clusters in II.
+- UD has a more skewed attentional tuning (rule-like). II has a more 
+  normally distributed attentional tuning. Ineffective attentional tuning
+  has higher number of clusters.
+
+- MTL has been posited to be responsible for
+  similarity-based familiarity signals, where the HPC is responsible
+  for encoding new clusters after surprising events (Love and Gureckis, 
+  2007). Hippocampal activations have been show to positively relate to cluster
+  activations in SUSTAIN (Mack, Love & Preston, 2016). Additionally, HPC has
+  been shown to be involved in forming and adjusting object representations (refs).
+  
+- In this line of argument, II structures, due to their difficulty, require
+  higher number of clusters for SUSTAIN to accomodate them. Higher number of
+  clusters will result in clusters more prefectly matching training items,
+  so the matching clusters will dominate the activations. These higher
+  cluster activations can potentially reflect higher HPC (MTL) activations.
+
+** Recognition
+
+- Captured.
+
+- Higher number of clusters in II also result in higher recognition scores, because
+  recognition in SUSTAIN is based on the computed similarity between clusters
+  and input representation of training items.
+
+- Superior recognition memory performance follows not just from the modelling
+  perspective, but also from a neural point-of-view. HPC has been long
+  identified as crucial for memory, and the more information is retained,
+  the better the memory for the item, the higher the HPC is activated (ref?
+  Davachi, Mitchell & Wagner, 2003).
+* Discussion
+
+** Summary
+
+- Although there is clearly more that could be done, in particular
+  fitting SUSTAIN to a wider range of results. Here, we have shown -
+  for the first time - that both behavioural and neuroimaging data
+  obtained in these tasks can be accomodated by SUSTAIN.
+
+** Broad implications
+
+- why is it hard for covis? at limit, it predicts comperable recognition.
+
+- Previously, Davis, Love & Alison (2012) speculated that tasks like the II
+  are not suitable to model with SUSTAIN. This sentiment was based on the
+  idea that II is a procedural learning task as it is learned procedurally (Nomura et
+  al., 2007) - characterized by mechanisms not specified within
+  SUSTAIN. A procedural account, e.g. covering map version of ALCOVE (Kruschke,
+  1992), posits mechanisms that learn to associate visual inputs with behavioural
+  (category) responses. However, procedural accounts of II problems are based
+  on a range of experiments that received considerable scrutiny and often
+  have alternative explanations (see Nosofksy, Stanton & Zaki, 2005; Newell,
+  Dunn & Kalish, 2011; Le Pelley et al., 2019).
+
+- Our simulation captures both neuroimaging and behavioural data in the II
+  task. Therefore, the mechanisms postulated in SUSTAIN can potentially
+  account for human performance and fMRI data observed boht in UD and II.
+
+** Limitations
+
+** Conclusion
+
+* Miscellaneous
+
+- Continue with formal modelling (other conjunctive category structures),
+  directly compare categories on more diagnostic tasks. Direct comparison
+  of models fitted to both behavioural and neuroimaging data is a powerful tool
+  to find mechanisms able to accomodate each phenomena (see Oberaurer et al., 2018).
+
+- There is variability in both neural activity, accuracy and reported
+  strategies used within and across II and UD problems. This interindividual
+  variance can be controlled relatively well in a within-subject design,
+  where participants complete multiple problems at the same time or in
+  succession. There is evidence, that there are detectable individual
+  differences in the strategies used in both tasks. This difference
+  is likely observable in both neural and behavioural data as well.
+  SUSTAIN has succesfully accounted for individual differences
+  in behavioural and neural data in other paradigms (Braunlich & Love, 2018).
+  A more voluminous research project might choose this investigative
+  pathway.
+

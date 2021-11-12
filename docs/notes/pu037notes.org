@@ -1,0 +1,1267 @@
+* Outline plan for paper
+
+Title: Recognition performance after unidimensional and
+information-integration category learning.
+
+Abstract: Recognition performance on UD and II category structures
+supports the predictions of the SUSTAIN model, and are potentially
+problematic for the COVIS model.
+
+1. SUSTAIN's cluster formation mechanism makes some interesting
+  and correct predictions:
+
+a. Greater recognition for exceptions to a simple rule (Sakamoto &
+   Love, 2004)
+
+b. Greater MTL actiavtion for exceptions to a simple rule (Davis et
+   al., 2016).
+
+2. We argue here that SUSTAIN predicts greater MTL activation and
+   recognition in an II than an UD task.
+
+3. The MTL prediction is correct (Carpenter et al., 2016), the
+   recognition prediction is untested.
+
+4. We report a large-sample test (N ~= 200) of this prediction across
+   four instantiations of a classic UD & II experiment. We focus on
+   analysis of the full sample here; results reported by instantiation
+   can be found in Sup Mat.
+
+5. SUSTAIN's prediction is correct. COVIS would seem to have trouble
+   predicting this.
+
+Technical aside
+
+a. One the known results with the II structure is that a minority of
+   participants seem to ignore one of the dimensions, essentially
+   treating an II problem as if it were a UD problem (and, to a lesser
+   extent, vice versa i.e. treating a UD problem as if it were more
+   complex). Including such people in the analysis - which is intended
+   to compare UD and II classifiers - reduces statistical power.
+
+b. We therefore decided to remove such people from our analysis, on
+   the basis of their verbal reports (we also removed people who
+   reported a strategy unrelated to the presented stimuli).
+
+c. One alternative would have been to remove people on the basis of a
+   DB analysis. We've recently shown that this analysis has some
+   serious shortcomings (Edmunds et al., submitted), so we used verbal
+   report instead. However, in this particular scenario, the two
+   approaches largely lead to the same people being excluded.
+
+d. Probably want to put the following additional analyses in Sup Mat:
+   (i) all participants included, (ii) participants excluded by DB
+   analysis.
+
+## Fraser's comments 31-7-2018
+
+I got to this a little quick than I anticipated. Here are a few thoughts that I had.
+
+I really like the idea of framing it in terms of discriminating between SUSTAIN and COVIS as it avoids giving the paper a "COVIS is rubbish. End of story" theme but instead suggests an alternative to COVIS which is something Greg has criticised us for before. Your framing of SUSTAIN seems plausible to me. However, I was not quite clear the extent to which SUSTAIN theorists have explicitly said that it can't handle II or whether it is an inference on your part. I think either would be ok but a little more careful framing there might be useful.
+
+In terms of the introduction the language is often quite emotive (e.g., "incredibly", "astoundingly"and "thoroughly undermines"). It's not that I don't agree with your basic tenet but I think it could be toned down a bit and you could still get the points across. Related to this "Thoroughly undermines" bit concerning the idea that informatin integration learning is via a procedural system strategically you also need to make the debate seem a little less decided. After all, if the past literature already indicates it is declarative, it kind of undermines much of the point of this paper. Rather it provides indicative support for the idea that it may be declarative but this study provides more direct evidence than the work you suggest. Along these lines, you may wish to be a little more cautious with the verbalizability evidence which we know some people are suspicious of. Equally for the imaging evidence, whilst the findings are plausibly reflective declarative processes they don't find direct evidence for it. Also for the imaging evidence we did not try to independently replicate but to enhance the original study by using a conjunctive strategy rather than UD RB one. All this evidence becomes much stronger in conjunction with the current evidence and that is the value of this paper.
+
+I think in places you could be a little more mindful that readers may not be experts in the area - so spell out what an II structure is a little more clearly as well as what GRT analyses are. Having said that I think a case could be made that the introduction could be a little bit tighter and shorter.
+
+For the method, I think a crucial thing is what is the difference between the various experiments and why you have collapsed them. I think this is important because for your main Bayesian analysis one of the reasons for using it is because you have collapsed the experiments. One might therefore ask why you didn't analyse the experiments separately with NHST and used Bayesian statistics to look at the null as well rather than relying on fancy stats which people probably have never come across before. Again I don't necessarily think this is overly problematic particularly if you put the NHST in an appendix but I think it does need to be addressed a bit more to justify this approach.
+
+I have never been a fan of in the recognition phase presenting each item three times as the second and third presentations of an item are confounded by the fact it's already been presented the recognition phase. For example, if one is using familiarity based memory which is acontextual you may say the item is familiar from the recognition phase but not from the categorization phase. I guess there is the question as to whether you can find any other studies in the literature which have taken the same approach, whether analysing the data with just the first presentation of each item gives the same results or if analysis of the data indicates that endorsements are not more likely for the second and third presentations than the first one. I do think this needs to be considered a little bit more because it is extremely atypical of the field and this approach hasn't really been justified.
+
+It would probably good to have the descriptives of d' in there which are hidden. We know they are going to be low which is not ideal but I don't think catastrophic but it would be weird not to have them.
+
+For the actual stats, I have no expertise of spike and slab and  I suspect many reviewers won't either which would give you a bit of leeway. More justification of the approach as mentioned above would be good to avoid the criticism that your analyses are unnecssarily complicated.
+
+I woudn't be that concerned about a small effect size as long as the inferential stats hold-up. Obviously it would be nicer if it was larger but I'm not sure it undermines your claim that the results are more consistent with SUSTAIN.
+
+The discussion does need a bit more work but equally I think it should be a fairly straightforward section.
+
+* Charlotte's notes undated
+** Tasks
+*** TODO Write up SUSTAIN modelling
+*** TODO Write draft of introduction
+*** TODO Write draft of discussion
+
+** Scratch introductions
+*** First
+Information-integration category structures are widely used in categorization research \cite{Ashby:2018gv}. These structures, sometimes also called overall similarity structures \cite{Ashby:2018gv} or condensation tasks \cite{Kalish:2017gv}, are typically compared to similar rule-based structures to investigate how stimulus dimensions are used to determine category membership \cite<e.g.,>[]{Ashby:2017fm, Ashby:2018gv, Wills2015}. One useful difference between these tasks is that they vary in how easy they are to describe [REF]. Figure~\ref{fig:categoryStructures} shows two popular unidimensional, rule-based and information-integration category structures implemented using square patches that vary in size and brightness. The rule-based task is simple to describe (e.g., ``''). In contrast, the information-integration task is much more difficult (e.g.,``''). 
+
+This difference in verbalizability means that these category structures are particularly useful for investigating the predictions of the COVIS model \cite<COmpetition between Verbal and Implicit Systems>[]{Ashby1998}. This is because COVIS proposes two, parallel, competing learning mechanisms: one that learns verbalizable structures, and one that learns non-verbalizable structures. Given a particular learning task, COVIS predicts that learning begins with the Explicit System. This systems learns by a process of hypothesis testing using working memory. Therefore, it is hypothisized to optimally learn rule-based category structures (such as the unidimensional structure shown in Figure~\ref{fig:categoryStructures}A). However, if the category structure is difficult to describe, as is the case with information-integration tasks (Figure~\ref{fig:categoryStructures}B), the Procedural System takes control of responding. This systems learns using a procedural mechanism that gradually associates stimuli with motor responses by using prediction error. 
+
+Perhaps the most interesting prediction that COVIS makes about these systems relates to consciousness. Proponents of COVIS make the strong claim that category knowledge acquired by the Explicit System is accessible to consciousness, whereas knowledge acquired by the Procedural System is not \cite{Smith2014}. This claim is supported by experimental work investigating the effect of manipulating working memory processes \cite{Ashby:2017fm}. For instance, a concurrent load impacts information-integration task performance less than rule-based task performance \cite{}[Waldron, Zethamova, maybe another one?]. Similarly, task pressure and reduced working memory capacity has been found to reduce performance on rule-based tasks more than information-integration tasks [REFS]. Additionally, information-integration category learning has been shown to be much less flexible tha rule-based cateory learning, as participants could transfer knowledge about rule-based structures to novel stimuli, but not information-integration category structures [CASALE]. This is hypothesised to be because participants have no access to the information-integration category knowledge, and thus cannot take advancing of the previous training and so must learn the transfer structure from scratch. Overall, these studies are consistent with the hypothesis that information-integration category structures are learned by an implicit, procedural learning mechanism. 
+
+However, recent work investigating the strategies used in these learning tasks casts doubt on the COVIS characterization of the role of consciousness in category learning. Experimentally, after learning either a rule-based or information-integration category structure, Edmunds and colleagues [REF] asked participants to report the strategy they used to complete the categorization task. They found that participants in both the rule-based and information-integration conditions were equally able to report their strategy and in both conditions mostly reported using complex, two-dimensional rule-based strategies. Indeed, only one participant reported ``going with their gut'', which is something that you might expect participants to report if they were responding implicitly. However, that participant was in a rule-based condition []. These results appear inconsistent with the claim that information-integration category knowledge is inaccessible to consciousness. 
+
+The modelling work re-evaluates a model-based strategy analysis uses ubiquituously in the COVIS literature \cite{Maddox1993}. COVIS predicts that participants learning hard to verbalize category structures should switch to using the Procedural System. However, there is always the possibility that these participants, for whatever reason, failed to use the optimum system for the category structure they were asigned. Indeed, this is a possible problem for many of the experiments within the COVIS literature. To avoid this problem, proponents of COVIS use a model-based strategy analysis as a manipulation check. The approach they use is informed by General Recognition Theory \cite<a multidimensional version of signal detection theory;>{Ashby1988}. Briefly, this approach involves fitting qualitatively different decision bounds to participants' reponses. Typically, these decision bounds correspond to a unidimensional strategy (such as shown in Figure~\ref{fig:categoryStructures}A), a diagonal strategy (such as shown in Figure~\ref{fig:categoryStructures}) and occasionally a conjunction strategy (this corresponds to a rule such as ``if the stimulus is dark and small it is in Category A; otherwise it is in Category B''). A random model is also included. Then, the strategy model that fits the best is that participant's strategy. If the majority of participants are found to be using the optimum strategy for the category structure they were assigned, the category structure manipulation is assumed to have successfully have elicited a change in the system underlying learning. 
+
+However, although intuitively this approach appears objective, there is evidence to suggest that this approach is inherently biased. Most participants learning information-integration tasks are identified as using implicit, diagonal strategies, even when they are using rule-based strategies \cite{Donkin2015, Edmunds2017a, Edmunds2018}. This means that participants could appear to be using the appropriate strategy for the category structure, whilst actually using a rule-based approach. Of course, it is impossible to tell (without re-analysing the data) whether any particular participant, in any particular COVIS study has been misidentified as using a diagonal strategy when they were in fact using a rule-based one. However, this raises the possibility that participants do have conscious access to information-integration category knowledge after all. 
+
+An alternative account that may be able to account for these findings is the SUSTAIN (Supervised and Unsupervised STratified Adaptive Incremental Network) model. SUSTAIN represents category knowledge by grouping stimuli into variable-sized clusters \cite{Love2004}. This adaptable stimulus representation mechanism allows a single category can be represented by one or many clusters, as the form of the category structure demands. Therefore, SUSTAIN with a single architecture can mimic the performance of exemplar-, prototype- and rule-based models \cite{Davis2012a}.
+
+SUSTAIN has accounted for an impressive variety of categorization phenomena \cite{Love2004}. For instance, SUSTAIN correctly predicts the ordering of difficulty of the six types problem \cite{Love1998a, Nosofsky1994a, Shepard1961}; that sometimes identification is learned more quickly than categorization \cite{Love1998, Medin1983}; inference learning \cite{Love2000}; the effects of development on categorisation \cite{Gureckis2004}; and unsupervised learning performance \cite{Gureckis2002, Gureckis2003}. 
+
+However, SUSTAIN predicts that participants learning an information-integration category structures would have superior recognition memory for exemplars of information-integration category structures than of rule-based category structures. 
+Therefore, experiment. 
+
+\subsection{Alternative model prediction}
+
+
+In the following, to begin to explore whether SUSTAIN is consistent with information-integration learning, we compare recognition performance after learning rule-based and information-integration category structures. Much research in the learning and decision-making literature has focused on comparing performance between rule-based and information-integration categorization tasks \cite<e.g.,>[]{Ashby2016a, Ashby2018, Wills2015}. Comparing these tasks is interesting because in many ways they are well-matched \cite{Smith2014, Smith2015a}. Indeed, in some cases, they are simple rotations of one another in stimulus space, which results in the same optimal accuracy, as well as identical between-category and within-category differences. 
+
+Furthermore, both COVIS and SUSTAIN make precise predictions about explicit memory processes in unidimensional and information-integration category structures. COVIS claims that rule-based and information-integration category structures are learned explicitly and implicitly, respectively \cite{Smith2015a}. Therefore, recognition memory should be stronger for the rule-based category structure than the information-integration one. 
+
+In contrast, SUSTAIN predicts that recognition performance will be superior for an information-integration category structure than a rule-based one. Intuitively, unidimensional rule-based category structures are learned by SUSTAIN using fewer clusters than information-integration category structures, because optimal unidimensional learning only requires attending to a single dimension. Furthermore, SUSTAIN assumes that more clusters there are, the greater the recognition memory \cite{Love2004}. We confirmed these intuitions by formally simulating learning these two category structures  (see Supplementary Materials for details of the simulation): information-integration tasks are generally learned with more clusters and result in higher recognition memory performance than a unidimensional structure.
+
+\subsection{Predictions}
+If information-integration category structures can be learned in a manner consistent with SUSTAIN \cite{Love2004}, we predict hat recognition memory for exemplars will be superior following the information-integration task compared to the unidimensional, rule-based task. In contrast, if information-integration category structures are learned procedurally we should expect the opposite result: superior memory following the rule-based task compared to the information-integration one.
+
+
+
+
+*** Second
+%The category learning literature is abundant with formal models, all with diverse assumptions about stimulus representation, generalization, and decision-making \cite{Pothos2011}. Of these models, perhaps one of the most flexible is SUSTAIN (Supervised and Unsupervised STratified Adaptive Incremental Network), as it represents category knowledge by grouping stimuli into variable-sized clusters \cite{Love2004}. This flexible stimulus representation mechanism allows a single category can be represented by one or many clusters, as the form of the category structure demands. Therefore, SUSTAIN with a single architecture can mimic the performance of exemplar-, prototype- and rule-based models \cite{Davis2012a}. 
+%
+%SUSTAIN can account for an impressive variety of categorization phenomena \cite{Love2004}. For instance, SUSTAIN correctly predicts the ordering of difficulty of the six types problem \cite{Love1998a, Nosofsky1994a, Shepard1961}; that sometimes identification is learned more quickly than categorization \cite{Love1998, Medin1983}; inference learning \cite{Love2000}; the effects of development on categorisation \cite{Gureckis2004}; and unsupervised learning performance \cite{Gureckis2002, Gureckis2003}. 
+%
+%Nevertheless, despite its broad explanatory scope, proponents of SUSTAIN have explicitly stated that the model cannot account for all categorisation tasks \cite<p. 270;>{Davis2012a}. Specifically, they discuss information-integration category structures, where optimal responding requires participants to combine information from multiple stimulus dimensions \cite<see Figure~\ref{fig:categoryStructures};>{Ashby2016a}. Indeed, the learning mechanisms described by SUSTAIN cannot account for several key features of information-integration category structure learning. First, SUSTAIN predicts that clusters are able to be used in novel clusters \cite{Love2004}, whereas procedural learning mechanisms predict that learning has to begin anew in associating stimuli with novel responses. 
+%
+%Second, clusters in SUSTAIN are represented using explicit, recognition memory processes \cite{Davis2012a, Sakamoto2004}. Furthermore, the fewer stimuli assigned to a particular cluster, the higher the recognition memory performance for those stimuli. For instance, previous work has found superior memory for a stimulus that is an exception to a rule compared to a matched rule-following stimulus \cite{Palmeri1995, Sakamoto2004}. SUSTAIN explains this effect by showing that the exception stimulus belongs to a much smaller cluster than the rule-following stimuli, and thus, is remembered better. On the other hand, information-integration tasks are argued to be learned implicitly and result in knowledge not accessible to consciousness \cite{Smith2015a}.
+%
+
+%
+%Finally, unlike SUSTAIN-based learning, learning information-integration tasks have been shown to be incredibly sensitive to the form, timing and content of feedback \cite<for reviews see>{Ashby2005c, Ashby2011b, Ashby2016a}. For instance, the learning mechanisms described by SUSTAIN can learn without the presence of feedback \cite{Gureckis2002, Gureckis2003}. In contrast, information-integration learning without feedback is astoundingly poor. Instead, participants tend to rely on sub-optimal, unidimensional rules \cite{Ashby1999}. 
+%
+%The sparse neuroscientific evidence also suggests that information-integration tasks are mediated by qualitatively different mechanisms than those described by SUSTAIN \cite{Davis2012a}. The processes underlying SUSTAIN have been mapped to the prefrontal cortex, the perirhinal cortex, and the hippocampus \cite{Love2007}. The hippocampus is hypothesized to construct codes, and the perirhinal cortex to generate a familiarity or fit signal. The prefrontal cortex monitors this signal and if it deems an event surprising the hippocampus recruits an additional cluster. In contrast, information-integration category learning is localized to a cortical-striatal loop \cite{Ashby2011}. The body and tail of the caudate nucleus represent perceptual information, and project to the supplementary motor area via the globus pallidus and the thalamus \cite{Nomura2007}. This lack of neural overlap between the two mechanisms suggests that SUSTAIN is not consistent with information-integration category learning \cite{Davis2012a}. 
+%
+%Instead, information-integration tasks are strongly argued to rely on procedural learning mechanisms such as the Procedural System of the COVIS model \cite<COmpetition Between Verbal and Implicit Systems>{Ashby1998, Ashby2011, Ashby2016a}. The COVIS model proposes that category learning is mediated by two, parallel, competing systems of category learning. Learning begins with the Explicit System, which tests verbalizable hypotheses and optimally learns rule-based category structures (such as the unidimensional structure shown in Figure~\ref{fig:categoryStructures}). However, if the category structure is difficult to describe, such as with information-integration tasks, the Procedural System takes control of responding. This system gradually associates stimuli with responses. In sum, the Procedural System predicts many of the features of information-integration learning that are inconsistent with SUSTAIN \cite{Ashby2016a, Davis2012a}.
+%
+%However, despite the amount of evidence arguing that information-integration tasks are learned by the Procedural System of COVIS \cite<for reviews see>{Ashby2005c, Ashby2011b, Ashby2016a}, other work suggests an alternative interpretation. First, much of the behavioral evidence for the COVIS model has not stood up to closer independent scrutiny \cite<for a partial review, see>{Newell2011a}. For instance, changing the response buttons is argued to affect information-integration but not rule-based category learning \cite{Ashby2003b, Maddox2004}. However, \citeA{Nosofsky2005} re-examined this study and found that the dissociation was by better explained by the increased complexity of the information-integration structure. Similarly, the effect of feedback timing \cite{Maddox2003, Maddox2005} was reinterpreted by \citeA{Dunn2012}; the effect of feedback type \cite{Ashby2002a} was reinterpreted by \citeA{Edmunds2015}; the effect of feedback delay \cite{Smith2014} by \citeA{Edmunds2018}; evidence of incremental learning \cite{Smith2015a} by \citeA{Smith2015b} and so on. The majority of these reinvestigations have identified methodological issues that cast doubt on the conclusion that an implicit, Procedural learning mechanism is responsible for information-integration learning. Instead, they suggest alternative explicit accounts that would be consistent with SUSTAIN. 
+%
+%Second, more recent neuroscientific evidence gave a different picture of information-integration learning. \citeA{Carpenter2016} tried to reproduce the findings of \citeauthor{Nomura2007} using a more appropriate rule-based category structure as a control (i.e., one that matched the information-integration category structure for the number of relevant dimensions). They found that, in direct opposition to the predictions of COVIS, the medial temporal lobe was more active in the information-integration category structure than in the rule-based one. As the medial temporal lobe mediates explicit, recognition memory processes, this pattern of activation suggests that information-integration tasks may rely much more on explicit memory processes than predicted by COVIS. Indeed, it is more consistent with the hypothesized neural localization of SUSTAIN \cite{Davis2012a}. 
+%
+%Third, there is evidence to suggest that participants learn information-integration tasks using explicit, rule-based strategies rather than the implicit, associative ones predicted by COVIS. For instance, participants can verbalise the strategies they use to learn information-integration tasks and these tend to be complex, multidimensional rules \cite{Edmunds2015, Edmunds2017}. This is problematic as the COVIS model states that participants should not be able to verbalize how they complete information-integration tasks \cite{Ashby2016a, Smith2015a}. 
+%
+%Of course, it is possible that participants do not correctly report the strategies that they are using. To try to avoid this problem, proponents of COVIS use a strategy analysis informed by General Recognition Theory \cite<a multidimensional version of signal detection theory;>{Ashby1988} to determine each participant's strategy \cite{Maddox1993}. Broadly speaking, this approach involves fitting different types of decision bound to participants responses; the strategy model that fits the best is that's participant's strategy. However, although intuitively this approach appears more objective, there is evidence to suggest that this approach is inherently biased: most participants learning information-integration tasks are identified as using implicit strategies, even when they are using rule-based strategies \cite{Donkin2015, Edmunds2017a, Edmunds2018}. This means that participants could appear to be using the appropriate strategy for the category structure, whilst actually using an entirely different approach. As the majority of supporting evidence for COVIS relies on this flawed analysis as a manipulation check, these results cast considerable doubt the claim that information-integration tasks are learned procedurally. On the other hand, these rule-based strategies are consistent with the predictions of SUSTAIN \cite{Love2004}.
+%
+%In the following, to begin to explore whether SUSTAIN is consistent with information-integration learning, we compare recognition performance after learning rule-based and information-integration category structures. Much research in the learning and decision-making literature has focused on comparing performance between rule-based and information-integration categorization tasks \cite<e.g.,>[]{Ashby2016a, Ashby2018, Wills2015}. Comparing these tasks is interesting because in many ways they are well-matched \cite{Smith2014, Smith2015a}. Indeed, in some cases, they are simple rotations of one another in stimulus space, which results in the same optimal accuracy, as well as identical between-category and within-category differences. 
+%
+%Furthermore, both COVIS and SUSTAIN make precise predictions about explicit memory processes in unidimensional and information-integration category structures. COVIS claims that rule-based and information-integration category structures are learned explicitly and implicitly, respectively \cite{Smith2015a}. Therefore, recognition memory should be stronger for the rule-based category structure than the information-integration one. 
+%
+%In contrast, SUSTAIN predicts that recognition performance will be superior for an information-integration category structure than a rule-based one. Intuitively, unidimensional rule-based category structures are learned by SUSTAIN using fewer clusters than information-integration category structures, because optimal unidimensional learning only requires attending to a single dimension. Furthermore, SUSTAIN assumes that more clusters there are, the greater the recognition memory \cite{Love2004}. We confirmed these intuitions by formally simulating learning these two category structures  (see Supplementary Materials for details of the simulation): information-integration tasks are generally learned with more clusters and result in higher recognition memory performance than a unidimensional structure. 
+%
+%Much research in learning and decision-making literature has focused on comparing performance between rule-based and information-integration categorization tasks \cite<e.g.,>[]{Ashby2016a, Ashby2018, Wills2015}. Comparing these tasks is interesting because in many ways they are well matched: they can be implemented using the same types of stimuli and in some cases are simply rotations of one another in stimulus space. This means that optimal accuracy, the between-category and within-category differences are identical \cite{Smith2014, Smith2015a}. Here, we will consider two particular instantiations of these category types: the unidimensional and information-integration category structures generated by sampling from a bivariate normal distribution \cite{Ashby1988, Ashby2018}. These category structures have been used in numerous experiments \cite{Ashby2005c, Ashby2011b, Newell2011a}.
+
+*** Summary thing
+%Weird summary thingy:
+%
+%Information-integration category learning.
+%- Optimal performance is argued to be from combining stimulus dimensions pre-decisionly
+%- Argued to be learned implicitly using procedural learning mechanisms
+%
+%Key features of information-integration category learning:
+%AKA why it's procedural:
+%
+%- information-integration category structures are learned gradually
+%- they are sensitive to the form, structure and timing of feedback
+%- not flexible (hard to re-train to different task)
+%- also sensitive to motor interference? (is that true?) 
+%- not affected by concurrent load 
+%- patient stuff?
+%
+%However, we have found that 
+%1. Participants are able to report the strategy that they used after learning II
+%2. The number of participants using the optimum strategy may be over-estimated in published work. 
+%3. When using a suitable control, participants seem to be using more recognition memory processes (neuro)
+%
+%Most key is that it is strongly argued to be implicit, but no-one has ever tested this directly. 
+%
+%An alternative account that may be able to account for these findings is SUSTAIN. 
+%
+%Therefore, experiment. 
+
+** Scratch discussion
+\subsection{Summary of argument and findings}
+ 
+The SUSTAIN model of category learning can account for a large variety of phenomena \cite{Love2004, Davis2012a}. One exception may be learning of information-integration category structures. Instead, these tasks have been extensively argued to be learned implicitly, using procedural learning mechanisms. Most of the evidence supporting this claim comes from the COVIS literature that argues that information-integration tasks are optimally learned by the Implicit System of COVIS \cite{Ashby2016a, Smith2015a}. However, a considerable amount of this evidence has been found to be unreliable when re-examined \cite{Newell2011a}. Critically, contrary to the predictions of the COVIS model \cite{Smith2015a}, after information-integration learning participants are able to report the strategy they used. Similarly, \citeA{Carpenter2016} found greater medial temporal lobe activation in information-integration tasks than rule-based tasks. These studies suggest that information-integration tasks may draw on more explicit memory processes than rule-based tasks, an effect more consistent with the predictions of the SUSTAIN model than COVIS. 
+
+To examine these apparent contradictions, we compared participants' recognition performance after learning either information-integration or rule-based category structures. SUSTAIN predicts that information-integration tasks recruit more (and smaller) clusters than a unidimensional task and thus, result in greater recognition memory than for rule-based tasks \cite{Love2004}. In contrast, COVIS predicts that information-integration category structures are learned implicitly, by associating areas of stimulus space with motor processes, whereas rule-based tasks are learned using explicit memory processes and hypothesis testing \cite{Ashby1998}. Therefore, COVIS predicts that recognition memory should be equivalent for both tasks, or perhaps an advantage for rule-based tasks. We found that participants had greater recognition memory after learning the information-integration task than the rule-based one. This pattern of results supports the SUSTAIN model over the COVIS model. 
+
+\subsection{Implications}
+
+A critical consequence of this finding is the suggestion that information-integration tasks are actually learned explicitly, contrary to the predictions of COVIS. However, a question remains: what about the other evidence? The COVIS literature includes a large quantity of papers that all argue that rule-based learning depends on explicit processes and information-integration learning depends on implicit, procedural ones \cite{Ashby2005c, Ashby2011b, Ashby2016a}. 
+
+Several overlapping explanations are possible. First, as mentioned briefly above, much of the evidence for the COVIS model has been re-interpreted by independent researchers. For instance, \citeA{Kalish:2017gv} re-examined work suggesting that high working memory capacity harmed learning of information-integration tasks \cite{}. They found, contrary to previous evidence and the predictions of COVIS, that more working memory was generally better. 
+
+Second, recent modelling work has suggests that participants learning information-integration category structures may only appear to be learning them implicitly \cite{Donkin2015, Edmunds2017a, Edmunds2018}. The evidence for the COVIS model heavily relies on dissociation logic: researchers use rule-based and information-integration category structures to encourage participants to use the Explicit and Implicit Systems respectively. However, there are no guarantees that participants use the optimal system to learn each category structure. As a manipulation check, proponents of COVIS conduct a strategy analysis to show that the majority of participants are using the optimum strategy for the category structure they learned. Unfortunately, this analysis is biased towards the optimum strategy for each category structure \cite{Donkin2015, Edmunds2018}. This means that it is possible for participants learning information-integration category structures to do so explicitly, using rule-based strategies but still appear to be using implicit strategies according to the analysis \cite{Edmunds2017a}. 
+
+\subsection{Conclusion}
+In conclusion, the current studies found that recognition memory is greater following information-integration category learning than a rule-based task. This pattern of results is more consistent with the single-system, explicit model of category learning SUSTAIN than the dual-system model COVIS. Furthermore, this work adds to the existing literature that suggests that information-integration tasks are learned explicitly. 
+* Andy's comments 30-8-2018
+** General comments
+- Overall, I quite liked this. It has the potential to be a pleasantly
+short, punchy paper. We might consider sending it to Cognitive
+Science? (If not, then QJEP or a Psychonomic Society journal would
+be fine).
+
+- It needs some proof reading, I've glossed over that aspect
+of things, otherwise I would have got bogged down.
+
+- I've read Fraser's comments and agree with them. I haven't bothered
+to make these points again myself (except by accident).
+
+- I didn't delve into the simulation or analysis code on this
+pass. Let me know if there's help/advice you'd like here, as
+otherwise I'd probably only look at it as my last job before the
+paper went off for peer review.
+
+- The SUSTAIN simulations might be brought a bit more into the main
+paper? You're doing a nice thing here of making an a prori
+prediction and it might be good to see a little more of it here?
+Although I guess would depend a bit on how quantitatively close the
+simulation outcome is to the observed data?
+
+** Abstract
+I skipped over this for now ... generally not worth commenting on
+these until the paper is in close to its final form.
+** Intro
+
+p. 2
+
+- Describing a model as flexible is not generally a compliment (it
+implies if can fit both that which we observed and that which we do
+not observe).
+
+- "identification is faster" -> "is learned more quickly". Faster
+implies something about RTs.
+
+- I don't get your first argument about SUSTAIN and II. Surely, if
+both dimensions are relevant, SUSTAIN would use both dimensions?
+
+- I also don't get your second argument, which starts talking about
+clusters and ends talking about rules. I could not work out what you
+were trying to say, I'm afraid.
+
+- I'm not sure the phrase "information integration category learning"
+is particularly helpful. It could imply one of two things: (a)
+category learning experiments that use an II structure, (b) the
+process by which COVIS assumes II structures are optimally
+learned. It's gonna be critical to always be clear which one of
+these things you mean.
+
+p.3
+
+- Do you really want and need to mention all that type-of-feedback
+shit? Personally, I was quite convinced by Ben and Bob's debunking
+of this work. So, to the extent these manipulations have effects, I
+don't think they're specific to learning the II structure.
+
+- The unsupervised feedback result is OK-ish, I think. But my feeling
+is that SUSTAIN would probably behave much like participants if
+faced with an II structure and no feedback. So, I'm not sure it's
+clear that these results are a problem for SUSTAIN.
+
+- The neuroscience argument seemed OK to me
+
+- Overall, I wasn't clear of the narrative path here? It seemed rather
+winding... SUSTAIN can't do II ... no, wait, it can. Not sure the
+reader will thank you for that garden path. Might be better
+presenting SUSTAIN and COVIS as two plausible theories, addressing
+the empricial evidence that each might find supportive / difficult?
+
+p.4
+
+- The long list of critiques of the COVIS literature might be better
+placed in the Discussion? Might be worth focussing in the Intro only
+on those things you really need to say in order to get to the
+Method?
+
+p.6
+
+- Now our 2018 GRT paper exists, it might be overkill to cite the 2017
+conference proceedings version as well? I don't think there's
+anything in the 2017 version that's not in the 2018 version, is
+there?
+
+- Wills, Inkster & Milton (2015) doesn't use II category structures.
+
+p. 7
+
+- I'm not sure the predictions of SUSTAIN for your study will be
+intuitable for the typical reader. It might be better to frame this
+as an informal explanation (and still say you've confirmed this by
+simulation).
+
+- You say a bunch of stuff about RB vs II here that you already said
+on the previous page.
+
+- the "numerous studies" references should be prefaced by an "e.g." -
+there are many more than the 3 you give, of course.
+
+p.8
+
+- I like the prediction section, but when you say 'learned
+procedurally' might be worth specifically name calling COVIS at
+that point?
+
+** Method
+
+p. 8
+
+- The Stimuli section is a bit too brief! I think we need to give at
+least some idea of the sorts of stimuli used. I would also put
+stimuli after category structures perhaps? Also, "varied between
+experiments" is an odd phrase when it's not that clear to the reader
+that there were multiple experiments. You probably need a premable
+as the first sentence or so of the Method section to explain what
+youv'e done.
+
+p. 10
+
+- R reference is 2015. You should update so it matches the version of
+R you are using (which is presumably more recent than 3.2?)
+
+- At the request of some reviewers, I'm now archiving on OSF. I only
+put anything on OSF at point of submission to a journal. OSF allows
+read-only links for peer reviewers to an archive that is not yet
+public. Here's the one I set up for this DAU:
+
+https://osf.io/nkam5/?view_only=59976841651640e1b613c389dd43ed9a
+
+At point of publication, it would then be made public and the link
+replaced with:
+
+https://osf.io/nkam5
+
+** Results
+
+p.11 - The Bayesian analysis was a bit beyond the sort of stuff I
+normally do. Apologies if these are dumb questions.
+
+- Why was 'sigma' spelt out on some occasions and written
+as a single Greek character on others?
+
+- So, our prior is that the effect, if there is one, is likely to be
+about 0.3, and in the direction of II > RB ? Is that correct? WHy
+0.3? If a reviewer said, "why did you presuppose an effect size in
+the direction of SUSTAIN, rather than the direction of COVIS", what
+would you say?
+
+- You provide equations for both d_a and criterion, but only analyse
+criterion?
+
+- More general point ... I wondered how much of this detail is really
+desirable for the main Results section? Do we really need more than:
+
+a. It's a hierarchical Bayesian analysis.
+b. The prior on the effect is blah, blah
+c. The BF is 12.
+
+The detail seems more like something for supplementary materials?
+** Discussion
+
+p.13 - You say that COVIS predicts equivalent recognition performance
+for the two conditions. I don't think you said that in the Intro, and
+so I don't think you provided a rationale for this claim.
+
+** Charlotte's notes:
+- I have no preference where we send this particularly, so Cognitive Science sounds great.
+- The feedback stuff ~p.3: It's there to motivate running the study at all. I thought if I didn't include some evidence for information-integration category learning being different there's no point in reporting the experiment.
+- I think a lot of the problems with the COVIS vs. SUSTAIN stuff is that obviously I think that COVIS is b.s. (and so should every sane person), but the predictions of the model are indeed different. So, although I think the unsupervised learning result is entirely consistent with SUSTAIN, that's not the interpretation that Ashby and friends have endorsed. Perhaps the entire paper is a straw man argument but *shrug* at least I don't have relevant evidence that I'm missing out. Yet. 
+
+* Lenard's notes/comments 09-04-2020
+** code comments
+
+I only noticed one thing: packages loaded at random.
+The best practice is to declare every packages at the beginning of your code,
+otherwise you run the whole script and get an error in the middle, losing all
+the work, becuase you are missing a package.
+
+Another advice is to save the session into RData recurringly. Simply 
+including save.image() will do the job. This is to avoid any substantial losses.
+
+- FIXED Trial randomization is not correct. In the paper, the modelling mentions that
+each stimuli was presented 10 times totalling in 360 trials. The function in
+the code simply subsets the training set, which is quite different. I fixed 
+it in the trainingMatrices.R, so it corresponds to what is in the paper.
+
+** general comments
+
+- I went along and corrected some types and did some proof reading.
+
+- UD and Rule-based is used interchangeably. I would suggest to stick to one 
+  and keep using it (probably UD).
+
+I think it needs some editing, but it is looking good. It can be a very 
+vibrant paper (people seem to love those, I certainly do) while being focused 
+and pragmatic.
+
+I think I said it before, but I like that you are making novel predictions a 
+priori. One of the biggest demarcation hallmark of scientific theories is
+their ability to predict novel facts that we did not observe yet. Psychology
+is in a dire need of theories that can do these.
+** introduction
+
+*** page 2
+
+
+- I think this description of procedural learning paradigms is the best I 
+  have read so far. 
+
+
+- DONE It is good to start with what believed to be a problem for SUSTAIN, but a 
+  distinction should be clearer between what people believe SUSTAIN cannot do
+  and the argument here. Maybe presenting it as this is the task, COVIS is one 
+  explanation, SUSTAIN is another, people think SUSTAIN can't handle it, but
+  it is premature to think that, because if multiple dimension is used, 
+  SUSTAIN will just use two dimensions, omg SUSTAIN could indeed do the task
+  and also the recognition part?
+
+*** page 3.
+
+- DONE non-commensureate is a wierd word, change it to maybe independent?
+
+- looking for references, maybe Deferred Feedback Does Not Dissociate 
+  Implicit and Explicit Category-Learning Systems: Commentary on Smith et 
+  al. (2014). Also this means that you have an alternative explanation that 
+  relates to a simple cognitive demand explanation and not implicit 
+  processes.
+
+*** page 4.
+
+- switching the keys will obviously result in more error responses, but what 
+  do you mean by depleted and how switching response keys is evidence for an
+  implicit procedural learning?
+
+- "Some have claimed that SUSTAIN.." comes out of the blue. Maybe link it to 
+  the preivous paragraph.
+
+
+*** page 5.
+
+- I added some clarifications.
+
+- I would press that SUSTAIN is a single system model incorporating both 
+  supervised and unsupervised learning, so it is not implicit nor explicit.
+
+- catlearn has been since updated and R as well.
+
+*** page 6.
+
+ - I think it would be useful to include some more info on the modelling, 
+   like sum of squared errors or what data was sustain compared agains in 
+   the minimization function. The lack of noise and variance can also be 
+   mentioned here.
+
+*** page 9
+
+The prediction section is really cool.
+
+- contrary to the prediction of who? I think it is fine to call theories and 
+  models by their name here.
+
+- what are the studies that indicate that higher recognition is a possibility 
+  for information integration? I am seriously interested. I also found some 
+  other research that might be interesting: 
+  https://www.sciencedirect.com/science/article/abs/pii/S1053810018300011
+
+** experimental work
+
+- I would suggest to make a graph for the stimuli and put it in the 
+  appendices. Or maybe share whatever was used to generate it? The abstract 
+  stimuli structure is in R, so maybe make some graphs or make a latex 
+  table or just simply provide the R code?
+
+- R Reference is out of date
+
+- Everybody is using OSF apperantly, and I have an account ott, so let me 
+  know if you intend to upload it or uploaded it already.
+
+** results
+
+- Bayesian analysis kicks ass, although most people will not understand it (i 
+  was having trouble). Maybe a bit clearer brief explanation in the method, 
+  while the technical stuff is put into the appendix?
+
+- If these thing will be in the appendix, then there are some more space to
+  explore the recognition scores if you wish. There are some interesting
+  prediction made by sustain that would be fun to look at. For example,
+  stimuli that are closer to clusters should have higher recognition score.
+  It is true for sustain but is it true for ppt as well?
+
+** discussion
+
+- I would press that SUSTAIN is a single system and therefore the results can 
+  be accounted for by a single system compared to other theories.
+
+* changes to slpSUSTAIN
+
+There were several changes made to the implementation and some to the model.
+Here is the list of changes not yet included in the future release candidate of 
+catlearn.
+
+** recognition entropy [developmental]
+
+The recognition score as was formalized in Love and Gureckis 2007 only worked
+for small number of clusters. In our end results, it doesn't make a 
+difference (it was not apperant during), but it does make a lot of difference
+for higher number of clusters. The change had to be made nonetheless. 
+
+The more exampler-like the model behaves, the smaller the activation score
+will be, even though that is not what you would expect. So our change 
+accounts for this. This might also work for a conjuction categories better
+too?
+
+logarithmic distance was removed (doesn't affect the result)
+
+
+** why SUSTAIn recruits more clusters than stimuli?
+
+Some operation causes NAs to be attributed to the highest activated clusters. 
+Alternatively, beacuse of the high r, there are many 'Inf's amongst cluster
+activations. The latter is the more likely scenario.
+
+I am trying to figure out why slpSUSTAIN might recruit more clusters then
+stimuli. I think the reason might come down to some of the parameters being
+too high. r might be specifically interesting, because lambdas are not
+capped in the model (lambdas are raised to the power of r). My theory is that this causes cluster activations
+to become Inf in R. When multiple cluster activations are given Inf, there
+is no way to select the winner.
+
+So the wrong maximum is selected. Can it be a problem with inf?
+
+- okay, so it is a trial order effect. I explained it in the paper.
+* Andy's comments 07-07-2020
+Hi Charlotte, Hi Leanrd, 
+
+I was a bit bemused by this to start with, as I assumed you were sending us something that you thought was in a close-to-submittable condition. I hope that I'm not going to offend anyone by saying that this just isn't the case - what we have here seems more like a written-by-committee internal tech report with ideas put down as they occurred to people (not always clearly, and frequently ungrammatically), and large chunks of information missing (most notably, no appendices, despite these containing most of the detail of the data collection). And a bunch of ideas that were new to me, particularly the modification to SUSTAIN. And also simulation results that were new to me, and which I'm afraid I'm not that confident about just yet.
+
+So, actually, I guess I'm still a bit bemused about what sort of feedback you and Lenard would find useful at this point? I've tried to come at it from a number of different angles, see what you think.
+
+I also wondered what journal you were aiming for? 
+
+One option would be JEP:General, spinning it as bringing together categorization and recognition memory - although you would have to do some narrative work in that regard - like importance of brining these two field together, etc. And you'd probably have to pull the experiments back into the main text given their preferred format.
+
+Another option, which I think I've mentioned before, is Cognitive Science (the journal). Seems like a kind of natural home for it, really. 
+
+Best
+
+Andy
+
+** Entropy as recognition
+
+I don't really get why you made this change to SUSTAIN. Table 2 seems to indicate that using SUSTAIN as published also works? Because actually the recognition score (which I assume is from the unmodified model) _is_ higher for II than UD. Not much higher, but so what? It's also behaviourally a pretty subtle effect, isn't it? And in any case you've not actually produced quantitative predictions of d' etc anyway...
+
+
+Second, I don't get why Shannon entropy is a sensible measure here. For example:
+
+- I'm guessing the idea is that R is some kind of recognition 'strength', in the sense that high R means high likelihood of saying 'old'? But you say "When R is low, cluster retrieval results in less information,
+so you are more likely to judge an item to be old or don’t recognize an item." Huh? Those would seem to be the two options available to the participant i.e. (1) 'old' or (2) 'new' (did not recognise the item). How can low R lead to both 'old' and 'new' being likely responses?
+
+- To a first approximation, R would seem to be just a measure of how many clusters there are. Why is that a good metric? Are we saying that the more clusters I have in memory, the more likely I am to say that I've seen a presented item before. Why?
+
+- For any given number of clusters, the value seems to be higher where those clusters are equally active, as opposed to one being much more active than the others. Why would one make that prediction? It seems to me that the opposite is more likely. For example, two cases where there are two clusters
+
+First, two equally active clusters
+
+1: 0.5  2: 0.5
+
+R = 1
+
+Second, still two clusters, one strongly active
+
+1: 0.9  2: 0.1
+
+R = .47
+
+In the second case, the stimulus is very much like a representation I have in memory. Why would I be less likley to say 'old' in that case than in the case where it's not much like anything I've seen?
+
+** Logic of the argument as stands
+The logic / narrative structure of the paper is pretty tortured at the moment. Here's my summary of what I think your argument structureis, in which I try to highlight how garden-path-y it is, and also some of the problems I see with the logic:
+
+
+1. SUSTAIN is great
+
+OK, sure.
+
+2. Authors of SUSTAIN say it can't do 'procedural learning'
+
+Well, they say "tasks that could potentially be better characterized by mechanisms other than those proposed by SUSTAIN include‘‘information integration’’ or procedural learning tasks (Nomuraet al. 2007)." Which isn't quite the same thing.
+
+3. SUSTAIN predicts very different behaviour to that observed in task optimally learned by a procedural mechanism.
+
+Does it? What is your evidence for this statement? None is given. 
+
+4. In this paper, we're going to look at an II task, because some people think its procedural
+
+Yeah, but we are not those people, so this comes across a bit odd and slightly disingenuous.
+
+5. Some people think II is procedural because it's affected by nature and timing of feedback
+
+But others say those experiments suck and we agree with that, so, see above.
+
+6. SUSTAIN is less affected by nature and timing of feedback because it can learn without feedback
+
+But it learns differently in the absence of feedback, and perhaps wouldn't do that well on an II structure (or an Ashby UD one) without feedback due to lack of separation bectween the categories. And SUSTAIN is largely silent on the other issues - no way you could represent most of these manipulations of delay and obs/fbk in the current SUSTAIN specification.
+
+More generally, not sure how the point you're making here helps advance the argument.
+
+7. SUSTAIN does not claim to learn implicitly
+
+It doesn't claim to learn entirely explicitly either, does it? Maybe I missed something... See further thoughts on this below.
+
+8. SUSTAIN makes detailed predictions about recognition following category learning.
+
+Well, it seeks to accommodate recognition judgments. Whether that counts as making predictions depends on model flexibility. 
+
+9. Many have argued that the results of a procedural learning system are not accessible to consciousness.
+
+OK, sure.
+
+10. We're going to measure recognition in II to see if SUSTAIN can learn II
+
+Huh !?!
+
+11. Modelling is cool.
+
+OK, but why? What does it add?
+
+12. Modelling showed that COVIS unexpectedly sucked (Edmunds & Wills, 2016).
+
+OK, true. 
+
+13. <Description of SUSTAIN>
+
+14. <Description of recognition in SUSTAIN>
+
+15. SUSTAIN predicts more 'complex' problems give better recognition (because more clusters)
+
+16. But the way SUSTAIN predicts recognition sucks 
+
+I think you're saying that the main ways it sucks are:
+
+(a) It takes cluster activation after competition 
+
+- Not sure I followed why that was a problem.
+
+- I guess you may be wanting to motivate this theoretically? For example, in that cluster competition is a way of representation a lateral inhibition process required to produce a categorization decision. So, actually it doesn't make a lot of sense to use this for a recognition judgment, which explicitly is meant to use similarity to all clusters. 
+
+(b) It uses activation rather than entropy 
+
+- What's the problem with using activation? 
+
+17. We fixed SUSTAIN by changing those things. 
+
+- But did you, though? The calculation of Equation 1 takes the activation of a cluster and divides it by the sum of all cluster activations. That seems pretty close (although not identical to) taking the post-competition activations. I mean, I understand that you need to normalize in order to do this calculation, which uses probabilities
+
+18. SUSTAIN can learn UD and II to an errorless criterion (almost)
+
+OK.
+
+19. SUSTAIN uses more clusters for II than UD
+
+OK.
+
+20. SUSTAIN is sensitive to trial order and can sometimes produce more clusters than stimuli.
+
+- Seems like a bit of an aside here. Important we understand it, but not good to divert the narrative here.
+
+21. SUSTAIN-entropy makes a clearer prediction than SUSTAIN-score
+
+- But why does that matter? Both predict the correct direction of effect, and you've not done quantitative fitting. 
+
+22. SUSTAIN predicts that II tasks can be learned explicitly
+
+- I'm not sure it does, does it? I mean, SUSTAIN can learn II, as you've shown, but does SUSTAIN predict that what is learned is accessible to verbal report? The only thing I could find on a quick look was:
+
+"Although it will not be explored fully here, SUSTAIN’s attentional system,
+which selects a small subset of relevant stimu-lus properties, naturally maps
+onto this verbal-learning system (Love, 2003)." - from Love & Gureckis (2007). 
+
+- That system would presumably not be active for II structures, as there's little point focussing on 1D at the expense of the other, is there?
+
+23. SUSTAIN predicts II > UD for recognition
+
+OK
+
+24. SUSTAIN predicts that people will be able to report the strategy that they use?
+
+- And, yet, you do not report strategies in the Results section!
+
+- If you had reported strategies, surely we still hit the old chestnut of 'so, they report something; but do their reports actually capture their behaviour?' In principle, it might be possible to fit SUSTAIN to individual participants, and then somehow relate the cluster structure to the verbal reports. Not sure exactly how, though. 
+
+25. We ran a bunch of studies to examine II > UD for recognition...
+
+26. Around about now, I presume the reader is meant to look at the appendices to see the results of the constituent experiments? 
+
+- I find it hard to judge how well that works without the actual appendices, but on the face of it seems a bit odd to say literally nothing about e.g. accuracy during training and the category test.
+
+- You don't even give any values for d' or c !!
+
+- You also need to decide what you're doing about the verbal reports, because you say they're a test of your hypothesis, but then you don't discuss them.
+
+27. Now here's some Bayes stuff you probably won't understand, but the BF was 12, and it was in the II > UD direction
+
+- You're right, didn't fully follow the Bayes stuff (see later). But OK.
+
+28. SUSTAIN is cool
+
+29. SUSTAIN doesn't do procedural learning, according to its makers, although they didn't test that.
+
+- See earlier comment,
+
+30. We looked at whether SUSTAIN can account for 'patterns of learning in a task argued to be learned procedurally'
+
+OK.
+
+31. SUSTAIN can learn an II structure
+
+OK.
+
+32. SUSTAIN predicts recognition II > UD, unlike 'a procedural account'
+
+Actually, I don't think you've ever said what the procedural account predicts, have you? Or what this procedural account is, or why it makes that prediction?
+
+33. We found recog II > UD, which supports SUSTAIN over 'a procedural account'
+
+OK, although see #32 comment
+
+34. So perhaps II tasks aren't learned procedurally.
+
+No - too many unstated assumptions in that logical chain there. I'm guessing you mean:
+
+- SUSTAIN is explicit and can predict the result
+- An amorphous 'procedural' account doesn't predict this result
+- Therefore, the learning is explicit rather than procedural.
+
+Two problem here are, of course, (1) determining that SUSTAIN is an explicit account, and (2) establishing that procedural accounts, as a class, cannot do this. 
+
+35. Maybe the conclusion that II is learned procedurally  is based on biased lit review. Other demonstrations that II is procedurally learned are flawed: 
+a. obs/fbk dissociation 
+b. and  strategies people report in II ; 
+c. and model recovery issues in GRT
+d. and strategies people report (again)
+
+- Seems mainly to be a self-plug, but OK.
+
+** Possible revised logic of argument
+
+- The UD vs II distinction: Two category structures, in some ways well matched, that differ in the verbalizability of the optimal decision bound. 
+
+- To date, these two structures have mainly been used to seek evidence for the COVIS model, which assumes UD is learned by an explicit rule-based process, while II is learned by procedural associative learning.
+
+- However, work from several labs suggests that II is not necessarily learned procedurally, but may instead be learned through much the same processes as UD. 
+
+- In the current paper, we assume this II-explicit-learning hypothesis, and use it to make the novel prediction that recognition performance will be better after II than UD classification.
+
+- We make this prediction through the following line of argument:
+
+1. Our previous work leads us to believe that a UD problem is represented by relatively simple  structure, while an II structure is represented by a more complex set of representations (mainly our verbal report data, I guess?) 
+
+2. In this paper, we show that SUSTAIN captures this informal hypothesis well, recruiting more clusters for UD than II. 
+
+3. SUSTAIN further predicts that, as a result:
+
+a) Hippocampal activation will be greater in II than UD (because it is the hippocampus that recruits new clusters, see Love & Gureckis, Figure 3). 
+
+AND
+
+b) Recognition performance will be better in II than UD (because more clusters leads to better recognition performance in SUSTAIN). 
+
+4. We have observed 3A (see Carpenter et al., 2016). 
+
+- So, let's test 3B (we'll consider COVIS in the GD)
+
+- Oh, look, it works.
+
+- It's not entirely clear what COVIS predicts about recognition memory, as it's never been formally extended to recognition data. However, on the basis of the assumptions that recognition memory is a largely explicit process,  COVIS seems constrained to predict poor recognition performance on II, because the procedural category representations would be unavailable to explicit cognition. In contrast, UD classification is explicit and hence the representations should also be accessible for recognition. So, while it's hard to be precise, COVIS seems constrained to predict that recognition would not be better in II than UD. Those supportive of COVIS may wish to comment or explore this further.
+
+** Issues with the simulation
+
+- These simulations cannot be stable outcomes, I think. There seems to be no possible justification for attentional focus being high in for II+ve but low for II-ve
+
+- This may be a bug, or it may be just that SUSTAIN is highly trial-order sensitive and you need many more than 30 participants to get stable behaviour out of it. But if you run 1000 participants and you're still seeing an effect of c/bal condition, then it's probably a bug (...or you need to be able to explain why you would expect this behaviour). 
+
+- Assuming I'm right about this, the simulation plots and tables should show two experimental conditions, not 4. 
+
+- I really struggle to see why you asked the model to learn to an errorless criterion, rather than the level of performance actually observed in your experiments. I suspect this may be one of the reasons your parameters are mainly at ceiling.
+
+- Table 1: It's always a bit of a red flag where the best fitting parameter is also the limit of the searched parameter space. You should expand the searched parameter space in such cases. 
+
+** Issues of reporting quality
+An overall comment is that there were an awful lot of grammatical errors. I've decided to try and ignore most of those on this pass, and comment mainly on the errors of odd or unclear phrasing:
+
+"In contrast, procedural learning proceeds incrementally (Ashby, Alfonso-Reese,
+Turken, & Waldron, 1998): visual inputs are gradually associated with a
+particular motor response using reward prediction error to moderate the
+weights. Thus, the response acts as a proxy for the category label: there is no
+intermediate generalisation stage."
+
+- This is pretty opaque/unclear and in places wrong e.g. SUSTAIN uses something much like reward prediction error e.g. Eq. 12. I don't know what an 'intermediate generalization stage' is - e.g. SPC generalizes. "The response acts as a proxy for the category label" - no, there is no category label, just the response.
+
+"We take this formal modelling step as skipping it would remove one of the
+great benefits of formal models (Wills & Pothos, 2012; Wills et al., 2017)."
+
+- That benefit being?
+
+"So, the SUSTAIN model."
+
+- Too chatty.
+
+"Now looking more closely at the mechanism of the model on a trial-by-trial basis."
+
+- Not a sentence.
+
+"Higher activations will belong to clusters, which are the most similar to the
+stimulus representation."
+
+- Huh?
+
+"expands its architecture"
+
+- Generally, the architecture of a model is that which does not change as you use it. cf. a computer architecture does not change just because the database has more in it than it used to. 
+
+"The model was also supplemented to account for recognition performance of
+amnesic patients, infants, young adults, and older adults (Love & Gureckis, 2007). This
+was the addition of recognition scores, which were essentially the sum of output activations
+for all clusters (Equation A6 in Love & Gureckis, 2007)."
+
+- "This was.." - poor phrasing
+
+"The smaller the cluster..."
+
+- Clusters in SUSTAIN are all exactly the same size - one point in space. I guess you mean "the fewer stimuli for which the cluster is the winner" ?
+
+"...the greater the recognition memory associated with that cluster (Davis et
+al., 2012)."
+
+- You mean something like "on average", right? Because you could have one cluster per category, and still get a high recognition score if the presented stimulus was the prototype...
+
+- Overall, the issue here is that the ordering of summary and expalantion is a bit chaotic.
+
+"The formal description of this recognition mechanism have its limitations.
+SUSTAIN mathematically specifies recognition scores after lateral inhibition has taken place. It will only suffice for small number of clusters."
+
+- Poor phrasing
+
+"if the model recruits large number of clusters with a relatively low cluster
+competition parameter, the output activation scores (Equation 6 Love et
+al., 2004) will be inhibited."
+
+- That parameter has not been explained. 
+- I don't think you mean inhibited - this means to reduce something to below its resting level. You perhaps mean 'reduced'?
+
+"So their sum will also be smaller compared to having two clusters with high
+cluster competition parameter. This contradicts to the way SUSTAIN incorporates
+recognition outlined above."
+
+- Not really following that at all. 
+
+Equation 1
+
+Um, the subscript on sigma is i, but everywhere else it is j. Seems wrong.
+
+Figure 3 
+
+- The meaning of the colour of the dots was not at all clear to me. It seemed like for some panel all dots were the same colour, whereas in other cases the colours vary. What is lost from this plot by making all dots black? i.e. I don't know what the colour is really representing. 
+
+"This was not successful (see Appendices for results from individual
+experiments), hence combining the information from all particiants across the
+four experiments using hierarchical Bayesian techniques."
+
+- poor phrasing
+
+"These category structures were an adaption of the positive
+information-integration category structure used in Experiment 1"
+
+- 'Positive' in what sense? Perhaps the gradient? but not specifiedc.
+
+- At no point is the link explicitly made that two of these four structures are UD
+
+** Bayesian analysis
+
+- In what sense is this model hierarchical? You're combining results from four experiments, so why is experiment not part of the hierarchy? You seem at present to be assuming that the d' is pulled from the same normal distribution irrespective of experiment. Is that particularly likely?
+
+- Although I have some sense of the analysis you performed, I did not follow Figure 5. What do the arrows mean? Why do they point in the direction they do? Why is one circle double-walled and the others single walled? Why are some circles grey and the others white? What are the boxes for? 
+
+* Andy's comment on 25-11-2020
+
+** Summary
+Overall, it's an impressive piece of work, and not that far from submittable. I'm only going to want to see one further draft before you submit it, so aim to fully address the below before sending me a second draft -- we can discuss things on zoom before you do that if that's helpful. Here are the three things that I think are most substantive, followed by a long list of lesser points afterwards:
+
+** TODO Major points 2021-01-20T18:09:32+0000
+
+1. I think you need to beef up the HPC <-> SUSTAIN relations. They come across as pretty weak, but that's not really the case. I think you need to make **much** more of the fact that cluster recruitment happens in the hippocampus as far as SUSTAIN is concerned, that this prediction was made by Love & Gureckis (2007, "Models in search of a brain"), way before Carpenter 2016 or Edmunds 2016. This probably needs to appear somewhere in the Intro. And you need to link back really strongly in the simulation section - SUSTAIN predicts more cluster recruitment for II than UD, that means more HPC activation for II than UD, and that's what Carpenter saw. This is impressive stuff and this paper at heart shows how SUSTAIN's theorizing in 2004-2007 formally accommodates the results of Carpenter et al. 2016.
+
+LD: Done.
+
+2. Your explanation of SUSTAIN's success on the recognition result (correctly located in the simulation section) needs work. Having more clusters in the space does not in itself lead to better recognition performance, I think? I mean, if you had a bunch of clusters that ended up in the regions of space containing the stimuli absent in training, that would hurt rather than help, right? So, I'm guessing the reason SUSTAIN does better for II than for UD  is that it recruits more clusters, and these clusters are as a result located nearer the presented stimuli, rather than being at an average of a range of presented stimuli? And, I think this only works because R is calculated after lateral inhibition (otherwise the higher number of clusters would dominate and they'd just think everything was old?)
+
+3. I think your Discussion of COVIS, attempting to discount it on the specific arcitecture of the SPS system, is likely to land you in trouble (details below). Overall, it might be worth avoiding this discussion entirely. A surer bet, I think would be to simply point out that COVIS predicts the opposite of the HPC result found by Carpenter 2016. That's enough to make it an inferior account to SUSTAIN. You can also muse about how it would explain (or not) the recognition data, perhaps in the manner of my musings in the detail comments below.
+LD: 3 is done. I remained brief, but it might have become less clear. There 
+isn't much space to expand more.
+
+** Title
+Hmm, I dunno. Feels like it could be snappier, but I'm not sure how.
+
+** Authors
+Do they mandate anonymous submission now? If so, OK. If it's our choice, I'd go for saying who we are. I think this would likely help rather than hurt. 
+
+LD: They require anonymized manuscripts. :(
+
+** Abstract
+OK
+** Introduction
+Some tweaking is needed here
+
+LD: I made some changes that also includes a bit more justification for the 
+tasks we focus on.
+
+*** Opening sub-section
+
+
+- The number of experiments is not 'countless' - they can definitely be counted.
+
+- The decision bound is not Boolean, because the dimension is continuous. 
+
+- A II structure is one where the gradient is neither zero, nor infinite (vertical line)
+
+- 'more prompt alternative explanations': not sure what you intend here. Prompt means to be on time; punctual. 
+
+- The results you say are 'problems with the COVIS simulations themselves' do not in fact simulate COVIS; they are just decision-bound analyses.
+
+------- 2021-01-18T19:43:12+0000 PROGRESS CHUNK
+
+- This bit:
+
+"Among these set of results are Carpenter et al. (2016) and Edmunds, Wills, and
+Milton (2016), which are problematic for COVIS." 
+
+I think what you're attempting to do is signal that you're going in some way to focus on these two results, and link to their description, but it doesn't come across that well. You need to be more explicit, and also probably have it as the start of a paragraph rather than the end of one.
+
+- Probably worth saying that Edmunds et al. 2016 was directly inspired by Carpenter et al.'s results, and how. So give the logic that gets you from the neuro result to the behavioural prediction and then state the prediction is correct.
+
+- "Given the history of these tasks" is a bit of a vague justification. You shoud be clearer about what it is about these tasks that makes them an interesting focus for you. For example, is it that they are problematic for COVIS? If so, you'd need to say why. Is it because SUSTAIN offers an explanation of this result? Is it both? 
+
+- The para. "SUSTAIN is a single-system framework" - it needs to be clearer what the function of this paragraph is. Is it to justify your focus on SUSTAIN in this paper? 
+
+- The phrase "SUSTAIN is a single-system framework, which encapsulates many psychological processes" is paradoxical and likely to get you into trouble. The reason is that it assumes the reader knows and agrees with your unstated assumptions about the difference between a system and a process. You're going to need to unpack that a bit if you're going to use this approach
+LD: I decided to get rid of this during decluttering.
+
+- "There are two highly relevant set of results for our rationale." - This is an odd statment, as it's not yet clear what your rationale is. 
+
+- "Second, SUSTAIN’s concept-forming and -altering mechanism, adaptive clustering, maps to HPC functions and activations" - This is an important point and way too compressed to be clear at the moment.
+
+*** SUSTAIN sub-section
+
+- "Usually centered" - when is this not the case? I suggest dropping 'usually' unless its an important point to make here for your argument.
+LD: One instance when it is not is when you set the coordinates yourself - 
+but that is a different scenario.
+
+- "This distance is calculated within dimension." - do you mean "for each dimension"?
+
+- "clusters’ activation function" - confusion of plural and singular forms
+
+- "attentioanl receptive field tunings" - not a helpful phrase as the reader will not know what this means in the context of SUSTAIN. Consider whether you can explain SUSTAIN without use of this jargon. If not, you're going to have to explain it.
+
+LD: I can exchange receptive field tunings to attentional tuning. This phrase
+seems like a more familiar phrase - to me at least.
+
+- "So similarity on dimensions with higher receptive field tunings will be more impactful on which cluster is activated." - this is not particularly clear, for a few reasons, including that all clusters are activated to some degree, initially. Also this is the first point at which you've said similarity leads to cluster activation, feels like that should have come earlier? 
+
+LD: Similarity is made up of both receptive field tunings and distances. If for example
+a stimuli of two dimension S(x,y) is further from a cluster representation
+on x then y, but x has high receptive field tuning and y has really low, then
+it x will be more impactful even though y is closer. I will introduce 
+similarity before I saying how attentional tuning interacts with distances.
+
+- "This process psychologically equates to how multiple alternatives reduce
+  confidence in a choice. The winning cluster will be the one with the highest activation before lateral inhibition takes place." - feels like you need to expand that slightly, like "...but the stronger the non-winning competitors, the weaker the activation of the winning cluster". Also, hard for me to judge from here, but is it important for what you'll say in the rest of the paper to explain this aspect? If not, perhaps don't bother to say it?
+
+LD: removed it during decluttering
+
+- "Lateral inhi-bition takes place in a winner-takes-all fashion — other clus- ters’
+activations will be muted for calculating further response
+probabilities. Laterally inhibited activations are considered to reflect the
+models’ overall familiarity with the current stim- ulus. The sum of these
+activations, Recognition Scores, in- dexes this familiarity." -- This seems a bit unclear, I read it thinking "well, the RS is just the activation of the winning cluster then? But that's probably not what you mean. Have another go at explaining this more clearly"
+
+LD: changed order to make it clear
+
+- Is it worth talking about SUSTAIN's account of unsupervised learning here? Why? (given the experiment you model is supervised).
+
+LD: removed during decluttering
+
+** Simulation of Edmunds
+*** Initial sub-section
+- "fitting SUSTAIN to the abstract design" - sounds like a fudge i.e. we didn't fit to the real experiment, just somehting like it. Probably not what you meant, try a re-phrase.
+
+- The footnote is a bit cryptic. 
+
+LD: I made it clearer.
+
+- "conditions were counterbalanced" is unclear. I think you mean something like there was some kind of variation of decision bound within each condition. 
+
+LD: amended
+
+- "in the 2D psychological space." - that's not a psychological space, it's a (physical) stimulus space. We have reason to suspect the psychological space (e.g. that revealed by MDS of similarity ratings) may be similar, but we don't know that for sure. I'd just say "stimulus space" to avoid this whole discussion.
+
+LD: amended
+
+- May need to mention that some stimuli were left out of training?
+
+LD: It is included in in paragraph 3 in this section. I think that is enough
+information.
+
+- Probably need to say the 'test phase' was a categorization test phase?
+
+LD: Amended..
+LD: 2021-01-19T13:36:48+0000 ------------ This is how far I got
+
+*** Model fitting
+- "the sum of squared errors between the mean human categorization performance"; performance in what phase- training or test? What exactly is fitted? Just overall accuracy? (one number per condition) Accuracy per block? Group- or individual-subject level fitting?
+
+LD: Made it clearer and shorter.
+
+- "The top 30% best solution" - the top 30% of best solutions?
+
+LD: The first. I added some extra info.
+
+- I don't think you need to include the upper bounds in Table 1 (you can leave that to the OSF repo) but if you do want to keep them you also have to say somewhere what the lower bounds were, and how boundedness was implemented (e.g. is it a property of the DEoptim fitting function?) 
+
+LD: I will leave it out.
+
+*** "Category learning"
+
+- It's not entirely clear what you're reporting here. I think what you're showing is the model's results for the categorization test phase? You need to be clearer.
+
+LD: I renamed the section to "Categorization test phase performance". I hope 
+that makes it clear.
+
+- Also, the observant will spot that the SSE as reported in Table 2 is around 4.6e-04. This is impressive, but it's also larger than the figure you report, which is presumably from the training phase? You should explain what's going on here.
+
+LD: You are right. A section here is missing. Let me know if that is enough.
+
+*** Cluster recruitment
+- Figure 2: Explain the meaning of the colour
+
+- "The number of clusters recruited reflects" -> "The mean, and variation, in the number of clusters recruited is a consequence of"
+
+- "and by proxy constructs category boundaries" - it doesn't construct boundaries at all. Boundaries can be inferred from its behaviour, but there's no representation of boundary within SUSTAIN as such. 
+
+- "It tries to recruit enough clusters so that it can compute similarity to minimise prediction errors" - I'm not really sure what that means? It can always compute similarity, irrespective of the numeber of clusters it has. And 'minimise prediction error' is OK-ish but a bit vague. People would often take that phrase to mean something like the R-W equation, which isn't quite the process I believe you're trying to describe here (error-driven cluster recruitment). 
+
+- "We can also see that ineffective attentional tunings will
+result in a more densely populated psychological space. The
+computed similarities will be less likely to result in prediction
+errors if there are more clusters." -- sorry, the point you are making here is largely lost on me. Perhaps have another go at explaining it?
+
+LD: This point is not essential - I would instead save some space for the 
+Hippocampal bit in the introduction. I dropped this bit then.
+
+*** Recognition
+- You start right in there with "R", having not ever defined what it is. This is very confusing. It should have been more explicitly defined in the Introduction/SUSTAIN section, and recapped here.
+
+- The next confusion is that R appears from Table 3 to be a single thing, but it is presumably a value that differs in a stimulus-specific way. Presumably Table 3 R is an average across all stimuli? As you say in the text, this is a bit like a SDT bias but I'm guessing that you don't really want to get into that because Edmunds et al. (2016) don't report a bias score in their SDT analysis, so you've nothing to compare it against. I'd drop R from Table 3, and drop the discussion of bias from the paper.
+
+LD: I dropped the bias discussion for the reasons you pointed out, and also 
+R. I could make better use of space for the HPC - SUSTAIN argument.
+
+- Perhaps be a bit clearer about the fitting procedure. In particular, that k is fitted on the basis of the human recognition data, but all the other SUSTAIN parameters are fit entirely on the basis of the categorization data. This is relevant, because the value of k cannot (I think) change the ordinal prediction of SUSTAIN about d' in II and UD, only the overall level of performance.
+LD: Added extra explanation.
+
+- "superior" is an odd choice given how poor human performance is in both cases. I'd go for 'better'. I think you might also need to emphasize of the human results that the rec performance, although poor, is statisticall significantly better in II than UD. 
+LD: Amended.
+
+** Discussion
+- The first sentence seems very misplaced, and isn't even really a sentence - an 'although' needs a resolution, in the same sentence. Rethink how you start your discussion. Your current first sentence is a limitation/extension, these come later in Discussions.
+
+LD: Amended. 
+
+- The rest of the first para is excellent!
+
+- The e.g. should probably be in brackets
+
+- Newell et al is probably an e.g. too. And probably there's also something by Nosofsky, isn't there?
+
+- COVIS was... : two uses of 'accounts' in the same sentence. Use 'model' instead on first occasion.
+
+LD: Done.
+
+- description of SPC in COVIS: missing "the first layer calculates...". Also you say it's four layer but only describe three layers?
+
+- In SPC description - 'connectionist' is too vague, as exemplar based models can also be connectionist, e.g. ALCOVE. I think you mean it is a distributed-representation connectionist system (in the vein of the classic PDP models in some ways?) Actually such systems probably can do recognition memory, see Hintzmann, McClelland.
+
+- So, how sure are you that the general mechanics of COVIS SPC couldn't be used / modified to do recognition? 
+
+- Our (Charlotte, Fraser, my) original thoughts about all this were that recognition is generally considered to be an explicit task, and hence in a dual-system approach, if a categorization is learned implicitly/procedurally, and that's a separate system, you should be able to do recognition on the basis of what was learned. In UD you could, although as you say, there's no need to, so perhaps you wouldn't see recognition in either condition. But what you wouldn't expect to see is better recognition in II than UD, which is what Edmunds 2016 observed. 
+
+- Now, it's always open for a COVIS advocate to take a different approach and say that some kind of unconsciously-derived familiarity score could be accessed to make an explicit recognition judgment. This makes the systems non-independent, but that wouldn't be the first time they assumed some kind of non-independence. 
+
+LD: 2021-01-20T18:08:51+0000 --------------- Completed edit.
+
+** Open Science statment
+Don't forget to add the specific OSF link, and ensure the stuff is there and working before submission!
+
+** Word usage
+- Check use of is vs. are ; axis vs. axes; boolean vs. Boolean; could vs can; the vs. a; weighed vs. weighted; unnecessary use of 'will'; will vs. are; are vs were
+LD: Looked through a bit, but it is possible I missed some. I will look 
+through it multiple times before final submissions.
+
+* Andy's comments 27-01-2021
+** Overall
+Excellent work!
+
+I guess the only thing I'd say is that you could be stronger on the fact that SUSTAIN _predicts_ the MTL/HPC activation differences observed. It is a direct prediction, they pinned those areas to the model component specifically - Love & Gureckis (2007) Figure 3. It's in the final para. of the Simulaiton section but could be stronger/clearer prior to that.
+
+Also, watch for UK spellings - you'll need US English throughout.
+
+** [done] Abstract
+[done] while learning these structures -> while participants learned these structures
+** [done] Inroduction
+*** [done] para.1
+- includes -> are 
+- the psychological space -> psychlogical space
+*** [done] para. 2
+- Combine first two sentences with 'and' 
+- distinct architectures -> two distinct architectures
+- implicit -> implicit (or procedural) 
+- Remove sentence "COVIS considers": it's subtly wrong and isn't needed
+*** [done] para. 3
+- were -> was
+*** [done] para. 4
+- "This MTL and HPC activity" - remove sentence, it's subtly wrong and not needed. 
+- "Including a recognition task" - ditto
+*** [done] para. 5
+- "in bundle" -> "in combination"
+- clause "which in bundle" - remove clause. subtly wrong (the computational level, at least by Marr's defintion, is not really covered) and not needed.
+*** para. 6
+OK
+*** [done] para. 7
+- "could accommodate" -> can accommodate
+- "maps to" -> has been mapped to
+*** [done] para. 8
+- trial-by-trial prediction -> predictions
+
+- delete clause "and error correction" - your meaning is obscure and not crucial to understanding
+
+- "SUSTAIN’s behaviour and HPC activity both correlated how stored category representations had to be reorganized as a function of chang-ing conceptual knowledge." - I could not ascertain your intended meaning here and wondered whether it was necessary?
+
+- prediction -> predictions
+
+- an experiment similar to Edumnds -> simulating Edmunds et al.'s (2016) experiment.
+*** [done] SUSTAIN
+**** [done] para. 1
+- Recognition Scores R -> Recognition score R
+- will be muted -> are muted
+**** [done] para. 2
+- will spread -> spread
+- will then be -> are
+- "an incorrect response" - use brackets rather than commas for this clause
+** [done] Simulation
+*** [done] para. 2
+- stimuli space -> stimulus space
+*** [done] para. 3
+- "24 stimuli randomly picked" - need to make clearer that, for each simulated participant, it was the same 24 that were used, providing a basis for old/new recognition. Describing the 36 items as 'original' is a bit odd, also.
+
+- "As SUSTAIN is ... will remain the same" - This is kinda cryptic and probably the kind of detail best left to sup mat. I suggest deletion.
+*** [done] Model fitting
+- [done] Retitle section "Simulation"
+- [done] The 2020 Wills et al. paper seems to be a non-existent paper? Remove.
+- [done] "The trial-order was randomised on each iterations with a random seed sampled in (0, 1000]." -> "The trial-order was randomised on each iteration" (you don't need that extra detail and it's a bit distracting.
+- [done] reiterated -> iterated
+- [done] Remove the SSE from this section. The key figures are in Table 2, this earlier, better, figure will cause unnecessary confusion.
+- [done] Table 1: Report to 4 d.p.
+*** [done] Simulation
+- [done] Remove sub-heading "simulation"
+- [done] Remove text "After finding ... the same seed"
+- [done] Table 2: Report to 2 d.p.
+**** [done] Cluster recruitment and attentional tuning
+- [done] recruited are -> recruited were 
+- [done] Figure 2 - remove coloration of dots, it's potentially misleading and contains no useful information. Obv. change legend correspondingly (each dot represents a different cluster). 
+- [done] Each dimensions -> each dimension
+- [done] remain -> remains
+**** [done] Recognition
+- [done] the we -> then we
+- [done] higher number -> higher numbers
+- [done] whereas -> where
+** [done] Discussion
+*** [done] para. 1
+Replace first paragraph with: 
+
+We have presented a formal account of empirical results (Carpenter; Edmunds) concerning the acquisition of unidimensional (UD) and information-integration (II) category structures. In so doing, we have shown - for the first time - that both the behavioral and neuroimaging data obtained in these tasks can be accomodated by a single-system model, SUSTAIN. The increased number of clusters recruited by SUSTAIN for the II structure served as a base for better recognition memory performance, and larger HPC activation, than in the UD structure. According to SUSTAIN, this is because the differing task demands of the two structures requires a larger amount of information to be encoded in the HPC for II structures.
+*** [done] para. 2
+- [done] tasks like II -> tasks like II category learning
+- [done] are not -> were not
+- [done] II is -> II category learning was
+- [done] "as it is learned procedurally" - remove clause, keep reference. 
+- [done] "- characterized" -> "and hence characterized"
+- [done] Remove sentence "A procedural account" - subtly wrong and not needed
+- [done] "and often have" -> "which turn out to have"
+- [done] "shown to accommodate" -> "argued to accommodate" (because actual simulations of COVIS are pretty rare)
+*** [done] para. 3
+- [done] with most activated -> with the most activated
+- [done] UD by a different system -> "UD by a different, rule-based system"
+- [done] activations of a memory traces -> activations of memory traces
+- [done] multiple-traces memory models -> multiple-trace memory models
+- [done] "access the where" - missing word?
+* Charlotte's comments 22-09-2020
+
+- CE: Maybe this is relevant: http://learnmem.cshlp.org/content/27/10/441.short
+- LD: Thank you, yes.
+
+-  CE: Apparently APA7 has short citations from the beginning. Don't know if that's what you're planning to do/if thats cogsci requirements (if so just add short at the beginning of all your citation calls)
+- LD: I updated the template for their current one (v. 2021), so it should be what they want.
+
+** abstract
+
+- CE: I think the abstract is slightly off. You introduce dual-system accounts, but then don't bring it back at the end. Perhaps the recognition sentences is also a bit too vague. 
+- LD: Good point. I made it a clearer.
+
+** introduction
+
+- CE: I think you need slightly more of an introduction here. Perhaps why these structures are thought to be interesting? 
+- LD: Makes sense. I included Ashy & Gott with a bit more justification for our focus on UD and II
+
+-  CE: Probably the Ashby & Gott (1988) reference here. Or something else you've already used if you've run out of space. 
+
+- CE: I don't think simulations is quite correct here.
+- LD: You are right. They have been corrected. or problems with the
+
+- CE: This is a good start, but these studies seem to come somewhat out of nowhere... is there a way you can link or sign-post slightly more fluently?
+- LD: Amended. I incorporated why they are important and provided more explanation.
+
+- CE: Yeah, for instance this doesn't work, because you haven't really detailed what the history is or why it's important. 
+- LD: Good point. Took a different approach.
+
+- CE: This first sentence implies that you've already told us the rationale, but that isn't clear so far. 
+- LD: Amended.
+
+** Simulation
+
+*** simulation of Edmunds et al. 2016
+
+- CE: I think you need to explain /why/ this not something else. 
+- LD: Good point. I included some extra justification.
+
+*** cluster recruitment
+
+% CE: I think it might be clearer to plot the points of all the stimuli and set colour by the cluster. (rather than just plotting the central tendency of the cluster). If you /need/ the centre then add that as well :) 
+% LD: I see what you are saying. It would be interesting, but I think it is more relevant to the argument we are making (more clusters -> better recognition) Note that clusters have no central tendency, they are coordinates - internal representations that underlie category nodes.
+
+** discussion
+
+- CE: Isn't that three layers?
+- LD: Yes - corrected
+
+** conclusion
+
+- CE: I edited the below for typos
+
+* Charlotte's comments 25-01-2021
+
+- see pu037cogsciCERE.pdf
+
+- There was a misunderstanding about what clusters are in SUSTAIN. Clusters 
+  are single coordinates in the psychological space (based on the stimulus 
+  space), which is a formal account of internal cognitive representations
+  that underlie category representations (output nodes). They do not have
+  central tendecies.

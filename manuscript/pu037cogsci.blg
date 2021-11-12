@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: pu037cogsci.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: pu037cogsci.bib
+apacite.bst [2012/02/25 v6.01 APA bibliography style]
+You've used 27 entries,
+            6735 wiz_defined-function locations,
+            1417 strings with 15945 characters,
+and the built_in function-call counts, 61672 in all, are:
+= -- 7882
+> -- 535
+< -- 3022
++ -- 3469
+- -- 54
+* -- 3982
+:= -- 11203
+add.period$ -- 117
+call.type$ -- 27
+change.case$ -- 464
+chr.to.int$ -- 0
+cite$ -- 54
+duplicate$ -- 1718
+empty$ -- 2141
+format.name$ -- 903
+if$ -- 11526
+int.to.chr$ -- 0
+int.to.str$ -- 54
+missing$ -- 0
+newline$ -- 715
+num.names$ -- 222
+pop$ -- 877
+preamble$ -- 1
+purify$ -- 108
+quote$ -- 0
+skip$ -- 3869
+stack$ -- 0
+substring$ -- 3895
+swap$ -- 944
+text.length$ -- 88
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 2544
+warning$ -- 0
+while$ -- 321
+width$ -- 0
+write$ -- 936

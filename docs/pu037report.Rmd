@@ -1,0 +1,554 @@
+---
+author: "Lenard Dome"
+title: "PU037 Brief Technical Report"
+output:
+      pdf_document:
+        toc: true
+        keep_tex: true
+header-includes:
+    - \usepackage{setspace}
+    - \doublespacing
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+---
+
+```{r, echo=FALSE}
+  # import packages
+require(ggplot2, quietly = TRUE)
+require(cowplot, quietly = TRUE)
+require(data.table, quietly = TRUE)
+require(BayesFactor, quietly = TRUE)
+require(knitr, quietly = TRUE)
+require(viridis, quietly = TRUE)
+require(dplyr, quietly = TRUE)
+require(ggthemes, quietly = TRUE)
+#library(grt, quietly = TRUE)
+
+# import sim data
+load("model/pu037.RData")
+load("model/pu037parameters.RData")
+load("model/pu037sims.RData")
+simData <- as.data.table(simData)
+colnames(simData)[1] <- "ppt"
+simData[, correct := abs(c1 - V2)]
+```
+
+# Method
+
+## Participants
+
+42 PPT (21 PPT in each condition).
+
+## Stimuli and Category Structures
+
+36 stimuli, grey squares that varied in brightness and size, were displayed on
+a white background. There were two conditions: unidimensional (UD) and
+information-integration (ID) category structures. Conditions were
+counterbalanced, so that UD structures included both horizontal and vertical
+category boundaries and II structures involved diagonal category boundaries
+with both positive and negative gradients. Figure 1 shows how these stimuli
+are distributed in a 2D psychological space.
+
+```{r, echo = FALSE, fig.height = 8, fig.width = 8, fig.cap = "The 2D psychological stimuli space"}
+UD1stim <- ggplot(simData[ppt == 1 & ctrl == 2 & cond == "UD+"],
+       aes(x = x, y = y,
+           size = y, colour = x)) +
+    geom_point(shape = 15) +
+    geom_vline(aes(xintercept = 0.5)) +
+    ylim(c(-0.05, 1.05)) +
+    xlim(c(-0.05, 1.05)) +
+    facet_wrap(cond ~ ., nrow = 2) +
+    labs(x = NULL, y = "Size") +
+    scale_color_gradient(low = "#222222", high = "#c9c9c9") +
+    scale_size_continuous(range = c(2, 6)) +
+    scale_shape_manual(values = c(15, 19)) +
+    theme_bw(base_size = 16) +
+    theme(legend.position = "none",
+          plot.margin = unit(c(0.25, 0.25, 0.25, 0.25), "lines"),
+          text = element_text(size = 16),
+          axis.text.x = element_blank(),
+          axis.text.y = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.ticks.x = element_blank(),
+          strip.text.x = element_text(color = "white", size = 16),
+          strip.text.y = element_text(color = "white"),
+          strip.background = element_rect(colour = "black", fill = "black"),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank())
+
+
+UD2stim <- ggplot(simData[ppt == 1 & ctrl == 2 & cond == "UD-"],
+       aes(x = x, y = y,
+           size = y, colour = x)) +
+    geom_point(shape = 15) +
+    geom_hline(aes(yintercept = 0.5)) +
+    ylim(c(-0.05, 1.05)) +
+    xlim(c(-0.05, 1.05)) +
+    facet_wrap(cond ~ ., nrow = 2) +
+    labs(x = NULL, y = NULL) +
+    scale_color_gradient(low = "#222222", high = "#c9c9c9") +
+    scale_size_continuous(range = c(2, 6)) +
+    scale_shape_manual(values = c(15, 19)) +
+    theme_bw(base_size = 16) +
+    theme(legend.position = "none",
+          text = element_text(size = 16),
+          plot.margin = unit(c(0.25, 0.25, 0.25, 0.25), "lines"),
+          axis.text.x = element_blank(),
+          axis.text.y = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.ticks.x = element_blank(),
+          strip.text.x = element_text(color = "white", size = 16),
+          strip.text.y = element_text(color = "white"),
+          strip.background = element_rect(colour = "black", fill = "black"),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank())
+
+II1stim <- ggplot(simData[ppt == 1 & ctrl == 2 & cond == "II+"],
+       aes(x = x, y = y,
+           size = y, colour = x)) +
+    geom_point(shape = 15) +
+    geom_abline(aes(intercept = 0, slope = 1)) +
+    ylim(c(-0.05, 1.05)) +
+    xlim(c(-0.05, 1.05)) +
+    facet_wrap(cond ~ ., nrow = 2) +
+    labs(x = "Brightness", y = "Size") +
+    scale_color_gradient(low = "#222222", high = "#c9c9c9") +
+    scale_size_continuous(range = c(2, 6)) +
+    scale_shape_manual(values = c(15, 19)) +
+    theme_bw(base_size = 16) +
+    theme(legend.position = "none",
+          plot.margin = unit(c(0.25, 0.25, 0.25, 0.25), "lines"),
+          text = element_text(size = 16),
+          axis.text.x = element_blank(),
+          axis.text.y = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.ticks.x = element_blank(),
+          strip.text.x = element_text(color = "white", size = 16),
+          strip.text.y = element_text(color = "white"),
+          strip.background = element_rect(colour = "black", fill = "black"),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank())
+
+II2stim <- ggplot(simData[ppt == 1 & ctrl == 2 & cond == "II-"],
+       aes(x = x, y = y,
+           size = y, colour = x)) +
+    geom_point(shape = 15) +
+    geom_abline(aes(intercept = 1, slope = -1)) +
+    ylim(c(-0.05, 1.05)) +
+    xlim(c(-0.05, 1.05)) +
+    facet_wrap(cond ~ ., nrow = 2) +
+    labs(x = "Brightness", y = NULL) +
+    scale_color_gradient(low = "#222222", high = "#c9c9c9") +
+    scale_size_continuous(range = c(2, 6)) +
+    scale_shape_manual(values = c(15, 19)) +
+    theme_bw(base_size = 16) +
+    theme(legend.position = "none",
+          plot.margin = unit(c(0.25, 0.25, 0.25, 0.25), "lines"),
+          text = element_text(size = 16),
+          axis.text.x = element_blank(),
+          axis.text.y = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.ticks.x = element_blank(),
+          strip.text.x = element_text(color = "white", size = 16),
+          strip.text.y = element_text(color = "white"),
+          strip.background = element_rect(colour = "black", fill = "black"),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank())
+
+cat_plot <- plot_grid(UD1stim, UD2stim, II1stim, II2stim, nrow = 2, scale = 1,
+       label_size = 18,
+       labels = "AUTO",
+       align = "hv", greedy = FALSE)
+
+
+ggsave(cat_plot, filename = "categoryStructures.pdf")
+```
+
+### Training
+
+PPT completed 360 supervised training trials in (3) blocks of 120.
+In each block, 24 stimuli randomly picked from the original 36 were
+shown 5 times. In each trial, PPT had to make a category judgement after the
+stimuli was displayed for 500ms. The stimuli stayed on the screen with Category
+A and B shown at the bottom of the screen until PPTs made a response. The
+response deadline was set to 5000ms.
+
+### Recognition Phase
+
+In this phase, PPT judged items as either new or old. This phase included all
+36 stimuli in one block and was repeated three times. Each old-new judgement
+were followed by a confidence rating (1-5 likert scale). The timing was the
+same as for training trials.
+
+### Category Test Phase
+
+Participants needed to make category judgement without feedback of the 36
+stimuli. Each stimulus was shown 3 times. The timing and trial structure was
+the same as training trials - with the exception of the lack of feedback.
+
+# Modelling
+
+SUSTAIN's parameters were adjusted to minimize the sum of squared errors between
+the mean human categorization performance and the mean of SUSTAIN's categorization
+performance during the test phase. The behaviour of SUSTAIN is not highly
+sensitive to its parameters, therefore I simultaneously fitted SUSTAIN to
+all problems. The trial-order was randomized on each iterations with a random
+seed sampled in $(0, 1000]$. The model was fitted with a differential
+evolutionary algorithm, as implemented in DEoptim packages. The algorithm
+reiterated 1000 times to find the best fitting parameters. 
+The speed of crossover was set to $c = 0.5$, which gave larger weights to
+succesful mutations. Every new population was generated from the
+top 30% best solution of the previous population. These settings helped to
+speed up the parameter search and find the best parameter for different
+trial orders. The best fitting parameters
+with $SSE = `r paramEvolve$optim$bestval`$ are presented in Table 3.
+
+```{r, echo = FALSE}
+tab <- c(paramEvolve$optim$bestmem)
+tab <- cbind(tab, c("10", "10", "20", "0.2"))
+rownames(tab) <- c("attentional focus (r)", "lateral inhibition (beta)",
+                   "decision consistency (d)", "learning rate (eta)")
+
+kable(tab, col.names = c("Best Fitting Parameters", "Upper Parameter Bounds"),
+      caption = "Best fitting parameters for SUSTAIN",
+      align = c("c", "c"))
+```
+
+# Simulation Analysis
+
+## Cluster Recruitment
+
+```{r, echo = FALSE}
+maxCluster <- simData[, max := max(winning), by = .(cond, ppt)]
+maxGroup <- maxCluster[, list(max = max(max), min = min(max)), by = cond]
+
+clusterPerPpt <- maxCluster[, list(mean = mean(max)), by = .(cond, ppt)]
+clusterPerPpt$cond <- recode(clusterPerPpt$cond,
+                             "II+" = "II",
+                             "II-" = "II",
+                             "UD+" = "UD",
+                             "UD-" = "UD")
+summaryCluster <- clusterPerPpt[, list(mean = mean(mean),
+                                       sd = sd(mean)),
+                                  by = cond]
+kable(cbind(summaryCluster, maxGroup[2:3, 2:3]),
+      col.names = c("Condition", "Mean", "SD", "Max", "Min"),
+      caption = "The number of clusters recruited by SUSTAIN")
+```
+
+The mean number of clusters recruited are $M^{c}_{ii} = 5.59$, $SD^{c}_{ii} = 1.20$
+for II and $M^{c}_{ud} = 3.01$, $SD^{c}_{ud} = 1.18$ for UD. SUSTAIN solves
+II with a minimum of 4 clusters and a maximum of 12 clusters. SUSTAIN solves
+UD with a minimum of 2 and a maximum of 12 clusters. Example clusters populating
+the psychological space are shown in Figure 2.
+
+```{r cluster, echo = FALSE, fig.cap = "Cluster positions for 4 simulated participants from each condition. Shapes represent categories, while each colour is a separate cluster.", fig.height = 8, fig.width = 8}
+clusterGraph <- simData[ppt %in% c(3, 59, 305, 482)]
+UDplus <-
+    ggplot(clusterGraph[cond %in% c("UD+") & ppt %in% c(3, 59, 482) & ctrl == 2],
+           aes(x = x, y = y, colour = as.factor(winning),
+                         group = winning)) +
+                  facet_grid(cond ~ ppt) +
+                  geom_vline(xintercept = 0.50) +
+                  geom_point(size = 2, alpha = 0.5) +
+                  geom_point(aes(x = clusterPosX, y = clusterPosY,
+                         colour = as.factor(winning)), size = 4, shape = 4) +
+                  labs(x = NULL, y = "Size") +
+                  theme_cowplot() +
+                  panel_border(remove = FALSE, color = "black") +
+                  scale_color_calc() +
+                  theme(legend.position="none",
+                        plot.margin = margin(0.25, 0, 0, 0, "cm"),
+                        axis.title.x=element_blank(),
+                        axis.text.x=element_blank(),
+                        axis.ticks.x=element_blank(),
+                        strip.text.y = element_text(color="white"),
+                        strip.text.x = element_blank(),
+                        strip.background = element_rect(colour="black",
+                                                        fill="black"))
+
+UDminus <-
+    ggplot(clusterGraph[cond %in% c("UD-") & ppt %in% c(3, 59, 482) & ctrl == 2],
+           aes(x = x, y = y, colour = as.factor(winning),
+                         group = winning)) +
+                  facet_grid(cond ~ ppt) +
+                  geom_hline(yintercept = 0.50) +
+                  geom_point(size = 2, alpha = 0.5) +
+                  geom_point(aes(x = clusterPosX, y = clusterPosY,
+                         colour = as.factor(winning)), size = 4, shape = 4) +
+                  labs(x = NULL, y = "Size") +
+                  theme_cowplot() +
+                  panel_border(remove = FALSE, color = "black") +
+                  scale_color_viridis_d() +
+                  theme(legend.position="none",
+                        plot.margin = margin(0, 0, 0, 0, "cm"),
+                        axis.title.x=element_blank(),
+                        axis.text.x=element_blank(),
+                        axis.ticks.x=element_blank(),
+                        strip.text.y = element_text(color="white"),
+                        strip.text.x = element_blank(),
+                        strip.background = element_rect(colour="black",
+                                                        fill="black"))
+
+
+IIplus <-
+    ggplot(clusterGraph[cond %in% c("II+") & ppt %in% c(3, 59, 305) & ctrl == 2],
+           aes(x = x, y = y, colour = as.factor(winning),
+                         group = winning)) +
+                  facet_grid(cond ~ ppt) +
+                  geom_abline(slope = 1, intercept = 0) +
+                  geom_point(size = 2, alpha = 0.5) +
+                  geom_point(aes(x = clusterPosX, y = clusterPosY,
+                         colour = as.factor(winning)), size = 4, shape = 4) +
+                  labs(x = NULL, y = "Size") +
+                  theme_cowplot() +
+                  panel_border(remove = FALSE, color = "black") +
+                  scale_color_calc() +
+                  theme(legend.position="none",
+                        axis.title.x=element_blank(),
+                        plot.margin = margin(0, 0, 0, 0, "cm"),
+                        axis.text.x = element_blank(),
+                        axis.ticks.x = element_blank(),
+                        strip.text.y = element_text(color = "white"),
+                        strip.text.x = element_blank(),
+                        strip.background = element_rect(colour = "black",
+                                                        fill = "black"))
+
+IIminus <-
+    ggplot(clusterGraph[cond %in% c("II-") & ppt %in% c(3, 59, 305) & ctrl == 2],
+           aes(x = x, y = y, colour = as.factor(winning),
+                         group = winning)) +
+                  facet_grid(cond ~ ppt) +
+                  geom_abline(slope = -1, intercept = 1) +
+                  geom_point(size = 2, alpha = 0.5) +
+                  geom_point(aes(x = clusterPosX, y = clusterPosY,
+                         colour = as.factor(winning)), size = 4, shape = 4) +
+                  labs(x = NULL, y = "Size") +
+                  theme_cowplot() +
+                  panel_border(remove = FALSE, color = "black") +
+                  scale_color_calc() +
+                  theme(legend.position="none",
+                        axis.title.x=element_blank(),
+                        plot.margin = margin(0, 0, 0, 0, "cm"),
+                        axis.text.x = element_blank(),
+                        axis.ticks.x = element_blank(),
+                        strip.text.y = element_text(color = "white"),
+                        strip.text.x = element_blank(),
+                        strip.background = element_rect(colour = "black",
+                                                        fill = "black"))
+
+
+cALL <- plot_grid(UDplus, UDminus, IIplus, IIminus, nrow = 4, scale = 1,
+       label_size = 14,
+       align = "hv")
+cALL
+
+ggsave(filename = "clusters.pdf", plot = cALL, units = "cm", width = 15,
+       height = 20)
+
+```
+
+The number of clusters recruited reflects how trial-order interacts with
+the following mechanisms: similarity, attention and prediction error.
+
+Simple problems also on average result in fewer clusters, while harder
+problems require the recruitment of more clusters.
+
+In all cases, SUSTAIN recruits clusters and by proxy constructs category
+boundaries, and tries to recruit enough clusters so that it can compute
+similarity to minimize prediction errors given the current trial order.
+
+In a scenario, where SUSTAIN recruits 14 clusters in UD conditions,
+attentional tuning was moving away from the relevant dimension: it judges
+stimuli to be closer to the wrong clusters due to their distance on the
+irrelevant dimension. In II, SUSTAIN adjusts receptive field tunings,
+so that it pays more attention to one of the dimension, even though both
+are equally important. In this scenario, 
+
+## Attentional tuning
+
+```{r, echo = FALSE, fig.height = 8, fig.cap = "Attentional tuning differences between the two dimensions"}
+maxCluster <- simData[, list(x = mean(lambdaX), y = mean(lambdaY),
+                             cluster = max(max)), by = c("ppt", "cond")]
+maxCluster[, diff:=list(x - y)]
+
+NEW <-maxCluster[cond %in% c("II+", "II-")]
+
+cor.test( ~ abs(diff) + cluster, data = NEW)
+correlationBF(NEW$cluster, abs(NEW$diff))
+
+p1 <- 
+    ggplot(maxCluster, aes(x = cond, y = diff, colour = cluster)) +
+    geom_jitter(size = 0.25) +
+    geom_boxplot(width = 0.25) +
+    theme_cowplot() +
+    scale_color_viridis_c() +
+    guides(colour = guide_colorbar(title = "Clusters")) +
+    theme(legend.position = "bottom",
+          legend.key.width = unit(1, "cm"),
+          text = element_text(size = 12),
+          ) +
+    xlab("Conditions") + ylab("Difference Between Lambdas (Brightness - Size)")
+
+ggsave(filename = "lambda.pdf", plot = p1, units = "cm", width = 15,
+       height = 15)
+    
+p2 <- ggplot(maxCluster, aes(colour = cluster)) +
+    geom_jitter(aes(y = x, x = "Brightness"), size = 0.1) +
+    geom_jitter(aes(y = y, x = "Size"), size = 0.1) +
+    geom_boxplot(aes(y = x, x = "Brightness"), width = 0.1, outlier.alpha = 0.5) +
+    geom_boxplot(aes(y = y, x = "Size"), width = 0.1) +
+    xlab("Stimulus dimensions") + ylab("Lambdas") +
+    theme_cowplot() +
+    facet_wrap(. ~ cond, nrow = 1) +
+    scale_color_viridis_c() +
+    theme(
+          text = element_text(size = 12),
+          legend.position = "none",
+          legend.key.height = unit(1.5, "cm"),
+          strip.text.x = element_text(color = "white"),
+          strip.text.y = element_text(color = "white"),
+          strip.background = element_rect(colour = "black", fill="black"))
+
+plot_grid(p2, p1, nrow = 2, labels = "auto", scale = 0.8)
+
+lambda_table <- maxCluster[, list(x = mean(x), y = mean(y),
+                                  xd = sd(x), yd = sd(y)), by=cond]
+
+kable(transpose(lambda_table,
+                keep.names = "col", make.names = "cond"),
+      format = "latex")
+
+
+```
+
+Attentional tuning plays an important role in cluster recruitment. We
+see that in the II condition, bigger difference between tuning of the
+receptive fields will result in more clusters being recruited. If SUSTAIN
+pays more attention to one of the dimensions, it will need to densely populate
+the psychological space. UD conditions show a similar problem. If the
+tuning of the receptive fields moves away from relevant dimension to
+weigh in each equally or put more weigh in on irrelevant dimension,
+clusters are more densely populate the psychological space. These trends
+are observable on Figure 4. On the other hand, Figure 5 shows dimensional
+tuning of the receptive fields as indicated by lambdas for each condition.
+On both figures, we see that higher number of clusters have ineffective
+attentional tuning.
+
+## Category Test
+
+SUSTAIN's categorization performance is qualitatively similar to what we observed
+from humans. Performance is worse in II than in UD.
+
+```{r accuracy, echo = FALSE}
+test <- simData[ctrl == 2]
+testPpt <- aggregate(correct ~ ppt + cond, data = test, mean)
+testPpt$cond <- recode(testPpt$cond,
+                       "II+" = "II",
+                       "II-" = "II",
+                       "UD+" = "UD",
+                       "UD-" = "UD")
+testPpt <- as.data.table(testPpt)
+
+ctab <-
+    cbind(testPpt[, .(mean = mean(correct), sd = sd(correct)), by = cond],
+          pu037$Correct_Test)
+ttestBF(formula = correct ~ cond, data = testPpt)
+kable(data.frame(ctab),
+      col.names = c("Category Structures", "SUSTAIN Mean",
+                    "SUSTAIN SD", "human"),
+      caption = "Categorization Accuracy")
+```
+
+SUSTAIN's performance is close to humans. SUSTAIN matches human-level
+performance with a mean difference of `r round(mean(abs(ctab[, 2] - ctab[, 4])), 3)`.
+See Table 3.
+
+## Recognition
+
+```{r, echo = FALSE}
+recognitionPpt <- aggregate(recognition.score ~ ppt + cond, data = test, mean)
+recognitionPpt$cond <- recode(recognitionPpt$cond, "II+" = "II",
+                              "II-" = "II",
+                              "UD+" = "UD",
+                              "UD-" = "UD")
+rtab <- as.data.table(recognitionPpt)[, list(mean = mean(recognition.score),
+                                             sd = sd(recognition.score)),
+                                             by = cond]
+kable(rtab, col.names = c("Category Structure", "$M_{R}$", "$SD_{R}$"),
+      caption = "Recognition Scores from Equation A6", format = "latex")
+```
+We can see a slightly larger bias to respond with old in the II problem
+compared to an UD problem, see Table 4. To get an
+approximate $d'$ measure from recognition scores, I applied Equation A11
+from Love and Gureckis (2007) to turn these recognition scores into choice
+probabilities:
+
+$$
+P(old) = \frac{R}{R + k}
+$$
+
+
+```{r, echo = FALSE}
+#load("model/recognition/pu037threshold.RData")
+#threshold <- optim$optim$bestmem
+threshold <- 0.571
+test$endorsement <- 0
+test$endorsement <- test$recognition.score / (test$recognition.score + threshold)
+test <- test[, recognition := ifelse(old == "old", 0, 1)]
+test[, pold := abs(recognition - endorsement)]
+test[, pnew := 1 - pold]
+
+# calculate d-prime
+HitRate <- test[old == "old", c("ppt", "cond", "pold")]
+HitRate <- HitRate[, list(hit = mean(pold)), by = c("ppt", "cond")]
+FalseAlaram <- test[old == "new", c("ppt", "cond", "pold")]
+FalseAlaram <- FalseAlaram[, list(hit = mean(pold)), by = c("ppt", "cond")]
+dprimePerPpt <- cbind(HitRate, false = FalseAlaram[, 3])
+dprimePerPpt[, c("zhit", "zfalse")] <- data.frame(
+                                              t(apply(dprimePerPpt[, 3:4], 1,
+                                              function (x) qnorm( x))))
+dprimePerPpt[, dprime := zhit - zfalse]
+dprimePerPpt$cond <- recode(dprimePerPpt$cond,
+                         "II+" = "II",
+                         "II-" = "II",
+                         "UD+" = "UD",
+                         "UD-" = "UD")
+dprimeMN <- aggregate(dprime ~ cond, dprimePerPpt,
+                      mean)
+dprimeSD <- aggregate(dprime ~ cond, dprimePerPpt,
+                      sd)
+kable(cbind(dprimeMN, dprimeSD[, 2]),
+      col.names = c("Conditions", "$M^{d'}$", "$SD^{d'}$"),
+      caption = "Descriptives for $d'$ for both conditions")
+meandiff <- mean(dprimeMN[, 2] - c(0.01, 0.00))
+ttestBF(formula = dprime ~ cond, data = dprimePerPpt)
+```
+
+```{r, echo = FALSE, fig.cap = "d-prime distributions for each condition."}
+ggplot(dprimePerPpt, aes(x = dprime)) +
+  geom_density(aes(fill = cond), alpha = .8) +
+  theme_cowplot() +
+  guides(fill = guide_legend("Conditions")) +
+  xlab("d-prime")
+```
+
+where k is a response threshold paramater. We found that the best-fitting
+threshold was $`r threshold`$. 
+
+We calculated the mean probability of a hit $P(H) = P(old \mid item^{old})$
+and false alarms $P(F) = P(old \mid item^{new})$ for each participant.
+Then we continued to determine $d'$ for each participant using the
+z-transformed $P(H)$ and $P(F)$, see Table 6. 
+
+As we see in Table 5, SUSTAIN recreates the superior recognition performance
+observed in the II by Edmunds et al. (2016), but predicts higher false alarm
+rates for UD structures. A comparison of d' between SUSTAIN and human data
+yields a mean difference of `r meandiff`.
+
+# Conclusion
+
+SUSTAIN can accomodate the results.
